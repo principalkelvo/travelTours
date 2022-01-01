@@ -1,16 +1,23 @@
 <template>
-  <div>
-    <aside-menu :menu="menu" @menu-click="menuClick" />
+  <div >
     <router-view/>
   </div>
 </template>
 <script>
-import AsideMenu from "@/components/AsideMenu";
 export default {
+  name: 'App',
   components: {
-    AsideMenu,
   },
-};
+  computed: {
+    
+  },
+  created () {
+   
+  },
+  methods: {
+    
+}
+}
 </script>
 <style lang="scss">
 @import "../node_modules/bulma";

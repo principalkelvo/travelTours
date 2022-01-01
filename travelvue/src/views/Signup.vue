@@ -105,8 +105,6 @@ export default {
 
           this.$store.commit('setIsLoading',false)
       }
-
-      console.log('hello')
     }
   }
 };
