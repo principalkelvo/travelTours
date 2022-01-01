@@ -114,7 +114,7 @@ export default {
 #cover {
     background: #222 url('https://unsplash.it/1920/1080/?random') center center no-repeat;
     background-size: cover;
-    height: 100%;
+    height: 92vh;
     text-align: center;
     display: flex;
     align-items: center;
