@@ -18,10 +18,10 @@
     </div>
     <div class="navbar-menu">
       <div class="navbar-end">
-        <router-link to="/" class="navbar-item">HOME</router-link>
+        <router-link to="/home" class="navbar-item">HOME</router-link>
         <router-link to="/about" class="navbar-item">ABOUT US</router-link>
-        <router-link to="/" class="navbar-item">CONTACT</router-link>
-        <router-link to="/" class="navbar-item">BOOKING</router-link>
+        <router-link to="/contact" class="navbar-item">CONTACT</router-link>
+        <router-link to="/booking" class="navbar-item">BOOKING</router-link>
         <div class="navbar-item">
           <div class="buttons">
             <router-link to="/log-in" class="button is-light"
@@ -42,7 +42,7 @@ export default {
 </script>
 <style scoped>
 nav.navbar {
-    box-shadow: 0 1px #660746;
+  box-shadow: 0 1px #660746;
   background-color: #f9e2e3;
   color: black;
 }
@@ -56,5 +56,6 @@ a.navbar-item.is-active,
 .navbar-link.is-active {
   border-bottom: 5px solid #660746;
   color: #660746;
+  background-color: #f9e2e3;
 }
 </style>
