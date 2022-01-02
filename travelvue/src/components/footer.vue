@@ -5,7 +5,7 @@
         <div class="level-left">
           <div class="level-item">
             <div class="footer-copyright">
-              <b>&copy; {{ year }}, tours</b> &mdash; Admin <span class="tag">v1.0.0</span>
+              <b>&copy; {{ year }}, tours</b> kengen &mdash; Admin Name <span class="tag">v1.0.0</span>
             </div>
           </div>
         </div>
@@ -33,3 +33,28 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+footer.footer {
+  border-top: 3px solid #f1f2f2;
+  background: #F9E2E3;
+  }
+
+  .logo 
+    a {
+      display: block;
+      height: 2rem;
+    }
+    .logo img, svg {
+      width: auto;
+      height: 2rem;
+    }
+  
+
+
+ @media (max-width: 1023px) {
+ .footer-copyright {
+    text-align: center;
+  }
+ }
+</style>
