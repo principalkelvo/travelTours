@@ -43,7 +43,7 @@ import axios from 'axios'
 import {toast} from 'bulma-toast'
 
 export default {
-  name: "Login",
+  name: 'Login',
   data(){
     return{
       username:'',
@@ -52,7 +52,7 @@ export default {
       }
   },
   mounted(){
-    document.title='Welcome | Djackets'
+    document.title='Welcome | Pokot'
   },
   methods:{
     async submitForm(){
