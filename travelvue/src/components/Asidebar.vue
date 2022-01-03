@@ -1,6 +1,6 @@
 <template>
   <aside class="aside is-placed-left is-expanded">
-    <span slot="label"> <b>Admin</b> Null </span>
+    <span slot="label"> <b>Admin</b> Kelvin </span>
   </aside>
 </template>
 
@@ -12,14 +12,15 @@ export default {
 
 <style scoped>
 
-aside.aside.is-expanded {
-  width: 14rem;
-}
+
 aside.is-placed-left {
   display: block;
 }
 aside.aside {
-  display: none;
+  width: 0rem;
+  transition: width 2s;
+  display: block;
+  opacity: 0;
   position: fixed;
   top: 0;
   left: 0;
@@ -31,8 +32,9 @@ aside.aside {
 }
 @media (min-width: 1024px) {
  aside.aside {
-    display: block;
-    transition-delay: 1s;
+  opacity: 1;
+    width: 14rem;
+
   }
 }
 </style>
