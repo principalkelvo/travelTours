@@ -12,15 +12,6 @@ export default {
 
 <style scoped>
 
-
-@media (max-width: 1023px) {
- body{
-    padding-left: 0;
-    overflow-x: hidden;
-    width: 100vw;
-  }
-}
-
 aside.aside.is-expanded {
   width: 14rem;
 }
