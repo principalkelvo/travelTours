@@ -57,5 +57,6 @@ a.navbar-item.is-active,
   border-bottom: 5px solid #660746;
   color: #660746;
   background-color: #f9e2e3;
+  animation: shake 0.5s;
 }
 </style>
