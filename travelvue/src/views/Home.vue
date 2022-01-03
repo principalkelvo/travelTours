@@ -99,12 +99,13 @@
         </div>
         <div class="content_bg">
           <div class="footer_content">
-            <div class="subscribe columns is-multiline">
+            <div class="subscribe columns is-multiline pt-6">
               <input class="input column is-5" type="email">
               <button class="button column is-3 is-light">Subscribe Now!</button>
             </div>
-            <div class="services">
-              <h2 class="title is-light">Services</h2>
+            <div class="columns is-multiline pt-6 pb-6 mt-5">
+            <div class="services column is-4">
+              <h2 class="subtitle mb-1">Services</h2>
               <ul>
                 Tour guiding
               </ul>
@@ -118,7 +119,8 @@
                 Conference
               </ul>
             </div>
-            <div class="about">
+            <div class="about column is-4">
+              <h2 class="subtitle mb-1">About us</h2>
               <ul>
                 Get to know us
               </ul>
@@ -126,26 +128,29 @@
                 Customers' Reviews
               </ul>
             </div>
-            <div class="contact_us">
+            <div class="contact_us column is-4">
+              <h2 class="subtitle mb-1">Contact Us</h2>
               <ul>
-                <i class="fas fa-map-marked-alt"></i
-                >Kapenguria, Kenya
+                <i class="fas fa-map-marked-alt  "></i
+                > Kapenguria, Kenya
               </ul>
               <ul>
-                <i class="fas fa-phone"></i
-                >+254712345678
+                <i class="fas fa-phone  "></i
+                > +254712345678
               </ul>
               <ul>
-                <i class="fa fa-envelope" aria-hidden="true"></i
-                >pokotours@gmail.com
+                <i class="fa fa-envelope  " aria-hidden="true"></i
+                > pokotours@gmail.com
               </ul>
             </div>
+            </div>
 
-            <div class="footer_line"></div>
+            <hr>
+
             <div class="columns is-multiline">
-              <div class="column is-6">All rights reserved @2022</div>
+              <div class="column is-9">All rights reserved @2022</div>
 
-              <div class="footer_icons column is-6">
+              <div class="footer_icons column is-2">
                 <a href=""><i class="fas fa-facebook"></i>f</a>
                 <a href=""><i class="fas fa-instagram"></i>i</a>
                 <a href=""
