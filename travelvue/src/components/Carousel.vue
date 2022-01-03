@@ -87,7 +87,7 @@ export default {
 <style lang="scss">
 .navigate {
   padding: 0 0px;
-  height: 100%;
+  height: 50%;
   width: 100%;
   position: absolute;
   display: flex;
