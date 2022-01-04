@@ -92,71 +92,138 @@
       </div>
     </section>
 
+    <!--Our Tour Package-->
+    <section class="tour_packages">
+      <div class="columns is-multiline">
+        <!--Our Tour Package title-->
+        <div class="title column is-12">
+          <h2 class="is-size-5 has-text-centered">
+            see amazing capture
+          </h2>
+          <div class="line">
+            <h1 class="is-size-2 has-text-centered">OUR TOUR PACKAGE</h1>
+          </div>
+        </div>
+
+        <!--packages-->
+        <div class="column is-4 is-dark">
+          <div class="image p-4">
+            <img src="../assets/footer_img.jpg" alt="">
+          </div>
+          <div class="image p-4">
+            <img src="../assets/footer_img.jpg" alt="">
+          </div>
+        </div>
+        <div class="column is-4 box">
+          <div class="tour_form">
+
+          </div>
+        </div>
+        <div class="column is-4">
+          <div class="image p-4">
+            <img src="../assets/footer_img.jpg" alt="">
+          </div>
+          <div class="image p-4">
+            <img src="../assets/footer_img.jpg" alt="">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--Our Travel Tips-->
+    <section class="travel_tips">
+      <div class="columns is-multiline">
+        <!--Our Travel Tips title-->
+        <div class="title column is-12">
+          <h2 class="is-size-5 has-text-centered">
+            Go for Categories
+          </h2>
+          <div class="line">
+            <h1 class="is-size-2 has-text-centered">OUR TOUR PACKAGE</h1>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+<!--Footer-->
     <footer>
       <div class="footer">
+        <!--footerimage-->
         <div class="footer_img">
-          <img src="../assets/logo.png" alt="maasai" />
+          <img class="image" src="../assets/footer_img.jpg" alt="maasai" />
         </div>
+        
+        <!--footer content-->
         <div class="content_bg">
           <div class="footer_content">
-            <div class="subscribe columns is-multiline pt-6">
-              <input class="input column is-5" type="email">
-              <button class="button column is-3 is-light">Subscribe Now!</button>
+            <!--footer subscribe input-->
+            <div class="field has-addons pt-6 pr-6">
+              <div class="control is-expanded">
+                <input
+                  class="input is-normal"
+                  type="email"
+                  placeholder="Your email..."
+                />
+              </div>
+              <!--footer subscribe button-->
+              <div class="control ">
+                <button class="button is-light is-normal"> Subscribe </button>
+              </div>
             </div>
-            <div class="columns is-multiline pt-6 pb-6 mt-5">
-            <div class="services column is-4">
-              <h2 class="subtitle mb-1">Services</h2>
-              <ul>
-                Tour guiding
-              </ul>
-              <ul>
-                wedding
-              </ul>
-              <ul>
-                Team building
-              </ul>
-              <ul>
-                Conference
-              </ul>
-            </div>
-            <div class="about column is-4">
-              <h2 class="subtitle mb-1">About us</h2>
-              <ul>
-                Get to know us
-              </ul>
-              <ul>
-                Customers' Reviews
-              </ul>
-            </div>
-            <div class="contact_us column is-4">
-              <h2 class="subtitle mb-1">Contact Us</h2>
-              <ul>
-                <i class="fas fa-map-marked-alt  "></i
-                > Kapenguria, Kenya
-              </ul>
-              <ul>
-                <i class="fas fa-phone  "></i
-                > +254712345678
-              </ul>
-              <ul>
-                <i class="fa fa-envelope  " aria-hidden="true"></i
-                > pokotours@gmail.com
-              </ul>
-            </div>
+            <div class="columns is-multiline pt-6 pb-6 mt-5 pr-6">
+              <div class="services column is-4">
+                <h2 class="subtitle mb-1">Services</h2>
+                <ul class="mb-1">
+                  Tour guiding
+                </ul>
+                <ul class="mb-1">
+                  wedding
+                </ul>
+                <ul class="mb-1">
+                  Team building
+                </ul>
+                <ul class="mb-1">
+                  Conference
+                </ul>
+              </div>
+              <div class="about column is-4">
+                <h2 class="subtitle mb-1">About us</h2>
+                <ul class="mb-1">
+                  Get to know us
+                </ul>
+                <ul class="mb-1">
+                  Customers' Reviews
+                </ul>
+              </div>
+              <div class="contact_us column is-4">
+                <h2 class="subtitle mb-1">Contact Us</h2>
+
+                <ul class="mb-1">
+                  <i class="fas fa-map-marked-alt pr-2"></i>
+                  Kapenguria, Kenya
+                </ul>
+                <ul class="mb-1">
+                  <i class="fas fa-phone pr-2"></i>
+                  +254712345678
+                </ul>
+                <ul class="mb-1">
+                  <i class="fa fa-envelope pr-2" aria-hidden="true"></i>
+                  pokotours@gmail.com
+                </ul>
+              </div>
             </div>
 
-            <hr>
+            <hr class="mr-6" />
 
             <div class="columns is-multiline">
               <div class="column is-9">All rights reserved @2022</div>
 
-              <div class="footer_icons column is-2">
-                <a href=""><i class="fas fa-facebook"></i>f</a>
-                <a href=""><i class="fas fa-instagram"></i>i</a>
-                <a href=""
-                  ><i class="fa fa-twitter" aria-hidden="true"></i>tw</a
-                >
-                <a href=""><i class="fas fa-tripadvisor"></i> tr</a>
+              <div class="footer_icons column is-3">
+                <a><i class="fab fa-instagram    "></i></a>
+                <a><i class="fab fa-facebook-f    "></i></a>
+                <a><i class="fab fa-twitter    "></i></a>
+                <a><i class="fab fa-tripadvisor    "></i></a>
               </div>
             </div>
           </div>
@@ -280,36 +347,70 @@ export default {
 }
 
 //footer
-.footer{
+.footer {
   position: relative;
   height: 100vh;
 }
-.footer_img{
-position: absolute;
-width: 30%;
-height: 80%;
-left: 30px;
-border: 2px solid;
-top: -25px;
+.footer_img {
+  position: absolute;
+  width: 30%;
+  height: 80%;
+  left: 30px;
+  border: 2px solid;
+  top: -25px;
 }
-.footer_img img{
+.footer_img img {
   width: 100%;
   height: 100%;
 }
-.footer{
-  background:#f9e2e3;
+.footer {
+  background: #f9e2e3;
+  .subtitle {
+    color: white;
+  }
+  a i {
+    color: #f9e2e3;
+    padding: 0 10px;
+  }
+  input.input{
+    background-color:none ;
+    //     max-width: 90%;
+    // width: 90%;
+  }
+  .select select, .textarea, .input {
+    background-color: #660746;
+    border-color: #f9e2e3;
+    border-radius: 20px;
+    color: #ECE4E9;
+  }
+  ::-webkit-input-placeholder{
+    color: #ece4e9a6;
+  }
+ :-moz-placeholder{
+   color: #ece4e9a6;
+ }
+ :-ms-input-placeholder{
+   color: #ece4e9a6;
+ } 
+ ::-moz-placeholder{
+   color: #ece4e9a6;
+ }
 }
-.content_bg{
+.content_bg {
   padding-left: 20px;
   height: 100%;
 }
-.footer_content{
+.footer_content {
   background-color: #660746;
-  padding-left:35%;
+  padding-left: 35%;
   padding-top: 20px;
   height: 100%;
   border-radius: 20px;
   color: #f9e2e3;
-  
+}
+.button.is-light {
+    background-color: #f9e2e3;
+    border-color: transparent;
+    color: rgb(0, 0, 0);
 }
 </style>
