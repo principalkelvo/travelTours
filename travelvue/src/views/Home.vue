@@ -38,7 +38,8 @@
     </section>
 
     <!--Top destination-->
-    <section class="top_destination">
+    <section class="top_destination section hero">
+      <div class="hero-body">
       <div class="columns is-multiline">
         <!--Top destination title-->
         <div class="title column is-12">
@@ -90,10 +91,12 @@
           </div>
         </div>
       </div>
+      </div>
     </section>
 
     <!--Our Tour Package-->
-    <section class="tour_packages">
+    <section class="tour_packages section hero">
+      <div class="hero-body">
       <div class="columns is-multiline">
         <!--Our Tour Package title-->
         <div class="title column is-12">
@@ -126,10 +129,12 @@
           </div>
         </div>
       </div>
+      </div>
     </section>
 
     <!--Our Travel Tips-->
-    <section class="travel_tips">
+    <section class="travel_tips section hero">
+      <div class="hero-body">
       <div class="columns is-multiline">
         <!--Our Travel Tips title-->
         <div class="title column is-12">
@@ -145,10 +150,11 @@
             <div class="column is-12">
               <div class="column is-6"></div>
               <div class="column is-3"></div>
-              <div class="column is-3"></div>
-            </div>
+            </div>              <div class="column is-3"></div>
+
           </div>
         </div>
+      </div>
       </div>
     </section>
 
@@ -166,7 +172,7 @@
       </div>
 
       <!-- first column -->
-      <div class="columns is-multiline is-gapless services mb-6">
+      <div class="columns is-multiline is-gapless services">
         <div class="column is-6">
           <div class="is-bordered">
             <div class="column is-6">
