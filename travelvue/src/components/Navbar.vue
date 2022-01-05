@@ -32,7 +32,7 @@
             <router-link to="/log-in" class="button is-light"
               >Log In</router-link
             >
-            <router-link to="/cart" class="button is-light"
+            <router-link to="#" class="button is-light"
               ><span class="icon"
                 ><i class="fa fa-shopping-cart" aria-hidden="true"></i></span
               ><span>cart</span>
