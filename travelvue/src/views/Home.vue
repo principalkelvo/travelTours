@@ -139,13 +139,110 @@
             Go for Categories
           </h2>
           <div class="line">
-            <h1 class="is-size-2 has-text-centered">OUR TOUR PACKAGE</h1>
+            <h1 class="is-size-2 has-text-centered">TRAVEL TIPS</h1>
           </div>
         </div>
 
+        <!--bg-->
+        <div class="travel_tips_bg">
+          <div class="columns is-multiline">
+            <div class="column is-12">
+
+              <div class="column is-6">
+
+              </div>
+              <div class="column is-3">
+
+              </div>
+              <div class="column is-3">
+
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
+<!--Our services-->
+    <section class="services">
+      <div class="columns is-multiline">
+        <!--Our services title-->
+        <div class="title column is-12">
+          <h2 class="is-size-5 has-text-centered">
+            we fulfil your need
+          </h2>
+          <div class="line">
+            <h1 class="is-size-2 has-text-centered">SERVICES</h1>
+          </div>
+        </div>
+        <!-- first column -->
+          <div class="column is-6">
+
+            <div class="is-bordered">
+              <div class="column is-5 ">
+                <figure class="image is-square">
+              <img class="is-rounded" src="../assets/footer_img.jpg" alt="">
+                </figure>
+              </div>
+            </div>
+          </div>
+          <div class="column is-6">
+
+            <div class="is-bordered">
+              <div class="column is-5 ">
+                <figure class="image is-square is-right">
+              <img class="is-rounded" src="../assets/footer_img.jpg" alt="">
+                </figure>
+              </div>
+            </div>
+          </div>
+          
+          <!-- second column -->
+          <div class="column is-6">
+
+            <div class="is-bordered">
+              <div class="column is-5 ">
+                <figure class="image is-square">
+              <img class="is-rounded" src="../assets/footer_img.jpg" alt="">
+                </figure>
+              </div>
+            </div>
+          </div>
+
+          <div class="column is-6">
+
+            <div class="is-bordered">
+              <div class="column is-5 ">
+                <figure class="image is-square is-right">
+              <img class="is-rounded" src="../assets/footer_img.jpg" alt="">
+                </figure>
+              </div>
+            </div>
+          </div>
+
+          <!-- third column -->
+          <div class="column is-6">
+
+            <div class="is-bordered">
+              <div class="column is-5 ">
+                <figure class="image is-square">
+              <img class="is-rounded" src="../assets/footer_img.jpg" alt="">
+                </figure>
+              </div>
+            </div>
+          </div>
+          <div class="column is-6">
+
+            <div class="is-bordered">
+              <div class="column is-5 ">
+                <figure class="image is-square is-right">
+              <img class="is-rounded" src="../assets/footer_img.jpg" alt="">
+                </figure>
+              </div>
+            </div>
+          </div>
+      </div>
+    </section>
 <!--Footer-->
     <footer>
       <div class="footer">
@@ -301,6 +398,8 @@ export default {
   }
 }
 
+
+//top destination
 .top_shortcuts {
   display: flex;
   align-items: center;
