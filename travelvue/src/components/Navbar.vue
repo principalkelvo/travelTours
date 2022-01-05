@@ -9,6 +9,7 @@
         aria-label="menu"
         aria-expanded="false"
         data-target="navbar-menu"
+        @click="showMobileMenu=!showMobileMenu"
       >
         <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
@@ -16,7 +17,7 @@
         <span aria-hidden="true"></span>
       </a>
     </div>
-    <div class="navbar-menu">
+    <div class="navbar-menu" id="navbar-menu" v-bind:class="{'is-active':showMobileMenu}">
       <div class="navbar-end">
         <router-link to="/home" class="navbar-item">HOME</router-link>
         <router-link to="/about" class="navbar-item">ABOUT US</router-link>
@@ -27,7 +28,8 @@
             <router-link to="/log-in" class="button is-light"
               >Log In</router-link
             >
-            <router-link to="/cart" class="button is-light">cart</router-link>
+            <router-link to="/cart" class="button is-light"><span class="icon"><i class="fa fa-shopping-cart" aria-hidden="true"></i></span><span>cart</span>
+            </router-link>
           </div>
         </div>
       </div>
@@ -38,6 +40,11 @@
 <script>
 export default {
   name: "Navbar",
+  data(){
+    return{
+      showMobileMenu:false
+    }
+  }
 };
 </script>
 <style scoped>
@@ -58,5 +65,10 @@ a.navbar-item.is-active,
   color: #660746;
   background-color: #f9e2e3;
   animation: shake 0.5s;
+}
+@media screen and (max-width: 1023px){
+.navbar-menu {
+    background-color: #f9e2e3;
+    }
 }
 </style>
