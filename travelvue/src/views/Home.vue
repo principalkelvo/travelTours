@@ -97,34 +97,32 @@
       <div class="columns is-multiline">
         <!--Our Tour Package title-->
         <div class="title column is-12">
-          <h2 class="is-size-5 has-text-centered">
-            see amazing capture
-          </h2>
+          <h2 class="is-size-5 has-text-centered">see amazing capture</h2>
           <div class="line">
             <h1 class="is-size-2 has-text-centered">OUR TOUR PACKAGE</h1>
           </div>
         </div>
+      </div>
 
         <!--packages-->
+        <div class="columns is-multiline">
         <div class="column is-4 is-dark">
           <div class="image p-4">
-            <img src="../assets/footer_img.jpg" alt="">
+            <img src="../assets/footer_img.jpg" alt="" />
           </div>
           <div class="image p-4">
-            <img src="../assets/footer_img.jpg" alt="">
+            <img src="../assets/footer_img.jpg" alt="" />
           </div>
         </div>
         <div class="column is-4 box">
-          <div class="tour_form">
-
-          </div>
+          <div class="tour_form"></div>
         </div>
         <div class="column is-4">
           <div class="image p-4">
-            <img src="../assets/footer_img.jpg" alt="">
+            <img src="../assets/footer_img.jpg" alt="" />
           </div>
           <div class="image p-4">
-            <img src="../assets/footer_img.jpg" alt="">
+            <img src="../assets/footer_img.jpg" alt="" />
           </div>
         </div>
       </div>
@@ -135,9 +133,7 @@
       <div class="columns is-multiline">
         <!--Our Travel Tips title-->
         <div class="title column is-12">
-          <h2 class="is-size-5 has-text-centered">
-            Go for Categories
-          </h2>
+          <h2 class="is-size-5 has-text-centered">Go for Categories</h2>
           <div class="line">
             <h1 class="is-size-2 has-text-centered">TRAVEL TIPS</h1>
           </div>
@@ -147,110 +143,99 @@
         <div class="travel_tips_bg">
           <div class="columns is-multiline">
             <div class="column is-12">
-
-              <div class="column is-6">
-
-              </div>
-              <div class="column is-3">
-
-              </div>
-              <div class="column is-3">
-
-              </div>
+              <div class="column is-6"></div>
+              <div class="column is-3"></div>
+              <div class="column is-3"></div>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-<!--Our services-->
+    <!--Our services-->
     <section class="services">
       <div class="columns is-multiline">
         <!--Our services title-->
         <div class="title column is-12">
-          <h2 class="is-size-5 has-text-centered">
-            we fulfil your need
-          </h2>
+          <h2 class="is-size-5 has-text-centered">we fulfil your need</h2>
           <div class="line">
             <h1 class="is-size-2 has-text-centered">SERVICES</h1>
           </div>
         </div>
+      </div>
+
         <!-- first column -->
-          <div class="column is-6">
-
-            <div class="is-bordered">
-              <div class="column is-5 ">
-                <figure class="image is-square">
-              <img class="is-rounded" src="../assets/footer_img.jpg" alt="">
-                </figure>
-              </div>
-            </div>
-          </div>
-          <div class="column is-6">
-
-            <div class="is-bordered">
-              <div class="column is-5 ">
-                <figure class="image is-square is-right">
-              <img class="is-rounded" src="../assets/footer_img.jpg" alt="">
-                </figure>
-              </div>
-            </div>
-          </div>
+        <div class="columns is-multiline is-gapless services mb-6">
           
-          <!-- second column -->
-          <div class="column is-6">
-
-            <div class="is-bordered">
-              <div class="column is-5 ">
-                <figure class="image is-square">
-              <img class="is-rounded" src="../assets/footer_img.jpg" alt="">
-                </figure>
-              </div>
+        <div class="column is-6 ">
+          <div class="is-bordered">
+            <div class="column is-6">
+              <figure class="image is-square">
+                <img class="is-rounded" src="../assets/footer_img.jpg" alt="" />
+              </figure>
             </div>
           </div>
-
-          <div class="column is-6">
-
-            <div class="is-bordered">
-              <div class="column is-5 ">
-                <figure class="image is-square is-right">
-              <img class="is-rounded" src="../assets/footer_img.jpg" alt="">
-                </figure>
-              </div>
+        </div>
+        <div class="column is-6 ">
+          <div class="is-bordered">
+            <div class="column is-6 is-pulled-right">
+              <figure class="image is-square">
+                <img class="is-rounded" src="../assets/footer_img.jpg" alt="" />
+              </figure>
             </div>
           </div>
+        </div>
 
-          <!-- third column -->
-          <div class="column is-6">
-
-            <div class="is-bordered">
-              <div class="column is-5 ">
-                <figure class="image is-square">
-              <img class="is-rounded" src="../assets/footer_img.jpg" alt="">
-                </figure>
-              </div>
+        <!-- second column -->
+        <div class="column is-6 second_column">
+          <div class="is-bordered">
+            <div class="column is-6 is-pulled-right">
+              <figure class="image is-square">
+                <img class="is-rounded" src="../assets/footer_img.jpg" alt="" />
+              </figure>
             </div>
           </div>
-          <div class="column is-6">
+        </div>
 
-            <div class="is-bordered">
-              <div class="column is-5 ">
-                <figure class="image is-square is-right">
-              <img class="is-rounded" src="../assets/footer_img.jpg" alt="">
-                </figure>
-              </div>
+        <div class="column is-6 second_column">
+          <div class="is-bordered">
+            <div class="column is-6">
+              <figure class="image is-square ">
+                <img class="is-rounded" src="../assets/footer_img.jpg" alt="" />
+              </figure>
+            </div>
+          </div>
+        </div>
+
+        <!-- third column -->
+        <div class="column is-6">
+          <div class="is-bordered">
+            <div class="column is-6">
+              <figure class="image is-square">
+                <img class="is-rounded" src="../assets/footer_img.jpg" alt="" />
+              </figure>
+            </div>
+          </div>
+        </div>
+        <div class="column is-6">
+          <div class="is-right">
+            <div class="column is-6 is-pulled-right">
+              <figure class="image is-square">
+                <img class="is-rounded" src="../assets/footer_img.jpg" alt="" />
+              </figure>
             </div>
           </div>
       </div>
+      </div>
     </section>
-<!--Footer-->
+    <!--Footer-->
     <footer>
       <div class="footer">
         <!--footerimage-->
         <div class="footer_img">
           <img class="image" src="../assets/footer_img.jpg" alt="maasai" />
         </div>
-        
+
         <!--footer content-->
         <div class="content_bg">
           <div class="footer_content">
@@ -264,8 +249,8 @@
                 />
               </div>
               <!--footer subscribe button-->
-              <div class="control ">
-                <button class="button is-light is-normal"> Subscribe </button>
+              <div class="control">
+                <button class="button is-light is-normal">Subscribe</button>
               </div>
             </div>
             <div class="columns is-multiline pt-6 pb-6 mt-5 pr-6">
@@ -317,10 +302,10 @@
               <div class="column is-9">All rights reserved @2022</div>
 
               <div class="footer_icons column is-3">
-                <a><i class="fab fa-instagram    "></i></a>
-                <a><i class="fab fa-facebook-f    "></i></a>
-                <a><i class="fab fa-twitter    "></i></a>
-                <a><i class="fab fa-tripadvisor    "></i></a>
+                <a><i class="fab fa-instagram"></i></a>
+                <a><i class="fab fa-facebook-f"></i></a>
+                <a><i class="fab fa-twitter"></i></a>
+                <a><i class="fab fa-tripadvisor"></i></a>
               </div>
             </div>
           </div>
@@ -398,7 +383,6 @@ export default {
   }
 }
 
-
 //top destination
 .top_shortcuts {
   display: flex;
@@ -445,6 +429,26 @@ export default {
   }
 }
 
+//services
+.services{
+  position: relative;
+}
+.column.is-6.second_column {
+    top: 25%;
+    /* border: 1px solid black; */
+    left: 25%;
+    position: absolute;
+    
+}
+
+//All titles
+h1::before{
+  content: '\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0';
+  text-decoration: line-through;
+  margin: auto 0.5em;
+
+}
+
 //footer
 .footer {
   position: relative;
@@ -454,13 +458,17 @@ export default {
   position: absolute;
   width: 30%;
   height: 80%;
-  left: 30px;
+  left: 2%;
   border: 2px solid;
-  top: -25px;
+  top: -2%;
+      
 }
 .footer_img img {
   width: 100%;
+  max-width: 100%;
   height: 100%;
+  max-height: 100%;
+  
 }
 .footer {
   background: #f9e2e3;
@@ -471,45 +479,41 @@ export default {
     color: #f9e2e3;
     padding: 0 10px;
   }
-  input.input{
-    background-color:none ;
-    //     max-width: 90%;
-    // width: 90%;
+  input.input {
+    background-color: none;
   }
-  .select select, .textarea, .input {
+  .select select,
+  .textarea,
+  .input {
     background-color: #660746;
     border-color: #f9e2e3;
     border-radius: 20px;
-    color: #ECE4E9;
+    color: #ece4e9;
   }
-  ::-webkit-input-placeholder{
+  ::-webkit-input-placeholder {
     color: #ece4e9a6;
   }
- :-moz-placeholder{
-   color: #ece4e9a6;
- }
- :-ms-input-placeholder{
-   color: #ece4e9a6;
- } 
- ::-moz-placeholder{
-   color: #ece4e9a6;
- }
+  :-moz-placeholder {
+    color: #ece4e9a6;
+  }
+  :-ms-input-placeholder {
+    color: #ece4e9a6;
+  }
+  ::-moz-placeholder {
+    color: #ece4e9a6;
+  }
 }
-.content_bg {
-  padding-left: 20px;
+footer.content_bg {
+  padding-left: 2%;
   height: 100%;
 }
 .footer_content {
   background-color: #660746;
   padding-left: 35%;
-  padding-top: 20px;
+  padding-top: 2%;
   height: 100%;
-  border-radius: 20px;
+  border-radius: 2%;
   color: #f9e2e3;
 }
-.button.is-light {
-    background-color: #f9e2e3;
-    border-color: transparent;
-    color: rgb(0, 0, 0);
-}
+
 </style>
