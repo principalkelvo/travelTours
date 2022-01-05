@@ -46,7 +46,7 @@
             Our most amazing place to explore
           </h2>
           <div class="line">
-            <h1 class="is-size-2 has-text-centered">TOP DESTINATION</h1>
+            <h1 class="is-size-2 has-text-centered has-text-weight-bold">TOP DESTINATION</h1>
           </div>
         </div>
 
@@ -99,13 +99,13 @@
         <div class="title column is-12">
           <h2 class="is-size-5 has-text-centered">see amazing capture</h2>
           <div class="line">
-            <h1 class="is-size-2 has-text-centered">OUR TOUR PACKAGE</h1>
+            <h1 class="is-size-2 has-text-centered has-text-weight-bold">OUR TOUR PACKAGE</h1>
           </div>
         </div>
       </div>
 
-        <!--packages-->
-        <div class="columns is-multiline">
+      <!--packages-->
+      <div class="columns is-multiline">
         <div class="column is-4 is-dark">
           <div class="image p-4">
             <img src="../assets/footer_img.jpg" alt="" />
@@ -135,7 +135,7 @@
         <div class="title column is-12">
           <h2 class="is-size-5 has-text-centered">Go for Categories</h2>
           <div class="line">
-            <h1 class="is-size-2 has-text-centered">TRAVEL TIPS</h1>
+            <h1 class="is-size-2 has-text-centered has-text-weight-bold">TRAVEL TIPS</h1>
           </div>
         </div>
 
@@ -153,21 +153,21 @@
     </section>
 
     <!--Our services-->
-    <section class="services">
+    <section class="services section hero">
+      <div class="hero-body">
       <div class="columns is-multiline">
         <!--Our services title-->
         <div class="title column is-12">
           <h2 class="is-size-5 has-text-centered">we fulfil your need</h2>
           <div class="line">
-            <h1 class="is-size-2 has-text-centered">SERVICES</h1>
+            <h1 class="is-size-2 has-text-centered has-text-weight-bold">SERVICES</h1>
           </div>
         </div>
       </div>
 
-        <!-- first column -->
-        <div class="columns is-multiline is-gapless services mb-6">
-          
-        <div class="column is-6 ">
+      <!-- first column -->
+      <div class="columns is-multiline is-gapless services mb-6">
+        <div class="column is-6">
           <div class="is-bordered">
             <div class="column is-6">
               <figure class="image is-square">
@@ -176,7 +176,7 @@
             </div>
           </div>
         </div>
-        <div class="column is-6 ">
+        <div class="column is-6">
           <div class="is-bordered">
             <div class="column is-6 is-pulled-right">
               <figure class="image is-square">
@@ -200,7 +200,7 @@
         <div class="column is-6 second_column">
           <div class="is-bordered">
             <div class="column is-6">
-              <figure class="image is-square ">
+              <figure class="image is-square">
                 <img class="is-rounded" src="../assets/footer_img.jpg" alt="" />
               </figure>
             </div>
@@ -225,9 +225,54 @@
               </figure>
             </div>
           </div>
+        </div>
       </div>
       </div>
     </section>
+
+    <!-- About Us -->
+    <section class="about_us hero">
+      <div class="hero-body">
+      <div class="columns is-multiline">
+        <!--About Us title-->
+        <div class="title column is-12">
+          <h2 class="is-size-5 has-text-centered">Our featured story</h2>
+          <div class="line">
+            <h1 class="is-size-2 has-text-centered has-text-weight-bold">ABOUT US</h1>
+          </div>
+        </div>
+      </div>
+      <div class="columns is-multiline is-centered">
+        <div class="column is-5">
+          <h2 class="is-size-4 has-text-weight-semibold">We since from 2011</h2>
+          <span class="has-text-left"
+            >Pokot Tours and Travel Ltd is a well-established Company in west
+            Pokot County handling inbound and outbound holidays for domestic
+            tourists and international tourists from all over the world.</span
+          >
+          <h2 class="is-size-4  mt-5 has-text-weight-semibold">Our Success</h2>
+          <span class="has-text-left"
+            >Our specialty is the ability to design unique tours and safaris to
+            fit every type of tourist, from the budget to the luxury providing a
+            unique opportunity to combine bush and beach adventures in hidden
+            treasures of Pokot, Kenya, East Africa's spectacular sceneries and
+            the World.</span
+          >
+
+          <hr class="hr">
+          
+
+          <button class="button mt-4">Read More</button>
+        </div>
+        <div class="column is-5">
+          <figure class="image is-4by5">
+            <img src="../assets/footer_img.jpg" alt="" />
+          </figure>
+        </div>
+      </div>
+      </div>
+    </section>
+
     <!--Footer-->
     <footer>
       <div class="footer">
@@ -430,23 +475,26 @@ export default {
 }
 
 //services
-.services{
+.services {
   position: relative;
 }
 .column.is-6.second_column {
-    top: 25%;
-    /* border: 1px solid black; */
-    left: 25%;
-    position: absolute;
-    
+  top: 25%;
+  /* border: 1px solid black; */
+  left: 25%;
+  position: absolute;
 }
 
 //All titles
-h1::before{
-  content: '\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0';
+h1::before {
+  content: "\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0";
   text-decoration: line-through;
   margin: auto 0.5em;
+}
 
+//about us
+.hr{
+  background-color: #660746;
 }
 
 //footer
@@ -457,18 +505,16 @@ h1::before{
 .footer_img {
   position: absolute;
   width: 30%;
-  height: 80%;
-  left: 2%;
+  height: 78%;
+  left: 1%;
   border: 2px solid;
   top: -2%;
-      
 }
 .footer_img img {
   width: 100%;
   max-width: 100%;
   height: 100%;
   max-height: 100%;
-  
 }
 .footer {
   background: #f9e2e3;
@@ -503,7 +549,7 @@ h1::before{
     color: #ece4e9a6;
   }
 }
-footer.content_bg {
+.content_bg {
   padding-left: 2%;
   height: 100%;
 }
@@ -515,5 +561,4 @@ footer.content_bg {
   border-radius: 2%;
   color: #f9e2e3;
 }
-
 </style>
