@@ -1,41 +1,7 @@
 <template>
   <div class="home">
-    <!--header-->
-    <section class="hero is-medium mb-6">
-      <!--carousel-->
-      <div>
-        <Carousel
-          :navigation="true"
-          :pagination="true"
-          :startAutoPlay="true"
-          :timeout="4000"
-          class="carousel hero-body"
-          v-slot="{ currentSlide }"
-        >
-          <!--the captions-->
-          <div class="has-text-centered captions">
-            <div class="background-captions">
-              <p class="title mb-6">Welcome to Djackets</p>
-              <p class="subtitle">The best jacket store online</p>
-            </div>
-          </div>
-
-          <!--background images-->
-          <Slide v-for="(slide, index) in carouselSlides" :key="index">
-            <div
-              v-show="currentSlide === index + 1"
-              class="slide-info image is-fullwidth"
-            >
-              <img
-                :src="require(`../assets/${slide}.jpg`)"
-                alt=""
-                class="has-ratio"
-              />
-            </div>
-          </Slide>
-        </Carousel>
-      </div>
-    </section>
+    <!--header corousel-->
+    <Fullwidth/>
 
     <!--Top destination-->
     <section class="top_destination section hero">
@@ -369,18 +335,14 @@
 <script>
 //connect to the backend
 import axios from "axios";
-import Carousel from "../components/Carousel.vue";
-import Slide from "../components/Slide.vue";
-import Footer from "../components/footer.vue";
+import Fullwidth from "../components/Fullwidth_Carousel"
 export default {
   name: "Home",
   data() {
     return {};
   },
   components: {
-    Carousel,
-    Slide,
-    Footer,
+    Fullwidth
   },
   setup() {
     const carouselSlides = [
