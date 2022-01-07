@@ -7,7 +7,6 @@
         <div class="columns multiline">
           <div class="column is-12">
             <!-- contact inputs -->
-
             <div class="column is-6">
               <!-- enquiry type -->
               <div class="field is-horizontal">
@@ -30,18 +29,29 @@
 
               <!-- name and surname -->
               <div class="field is-horizontal mt-5">
+                <!-- first name -->
                 <div class="field-body">
                   <div class="field">
                     <p class="control is-expanded has-icons-left">
-                      <input class="input is-medium" type="text" placeholder="Name" />
+                      <input
+                        class="input is-medium"
+                        type="text"
+                        placeholder="Name"
+                      />
                       <span class="icon is-small is-left">
                         <i class="fas fa-user"></i>
                       </span>
                     </p>
                   </div>
+
+                  <!-- surname -->
                   <div class="field">
                     <p class="control is-expanded has-icons-left">
-                      <input class="input is-medium" type="text" placeholder="Surname" />
+                      <input
+                        class="input is-medium"
+                        type="text"
+                        placeholder="Surname"
+                      />
                       <span class="icon is-small is-left">
                         <i class="fas fa-user"></i>
                       </span>
@@ -52,6 +62,7 @@
 
               <!-- email and phone -->
               <div class="field is-horizontal mt-5">
+                <!-- email -->
                 <div class="field-body">
                   <div class="field">
                     <p
@@ -71,6 +82,7 @@
                     </p>
                   </div>
 
+                  <!-- phone -->
                   <div class="field">
                     <div class="field has-addons">
                       <p class="control">
@@ -89,7 +101,110 @@
                 </div>
               </div>
 
-              <!-- comments -->
+              <!-- reservation -->
+              <div class="reservation pb-3">
+                <div class="title mt-5">
+                  <h1>Reservation Details</h1>
+                </div>
+                <!-- room type -->
+                <div class="field is-horizontal mt-5">
+                  <div class="field-body">
+                    <div class="field">
+                      <p class="control">
+                        <input
+                          class="input"
+                          type="text"
+                          placeholder="Room type"
+                        />
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- package type -->
+                <div class="field is-horizontal mt-5">
+                  <div class="field-body">
+                    <div class="field">
+                      <p class="control">
+                        <input
+                          class="input"
+                          type="text"
+                          placeholder="Package type"
+                        />
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- date check-in/out -->
+                <div class="field is-horizontal mt-5">
+                  <!-- check-in -->
+                  <div class="field-body">
+                    <div class="field">
+                      <p class="control is-expanded has-icons-left">
+                        <input
+                          class="input is-medium"
+                          type="date"
+                          placeholder="Check-in"
+                        />
+                        <span class="icon is-small is-left">
+                          <i class="fas fa-calendar"></i>
+                        </span>
+                      </p>
+                    </div>
+
+                    <!-- check-out -->
+                    <div class="field">
+                      <p class="control is-expanded has-icons-left">
+                        <input
+                          class="input is-medium"
+                          type="date"
+                          placeholder="Check-out"
+                        />
+                        <span class="icon is-small is-left">
+                          <i class="fas fa-calendar"></i>
+                        </span>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- adults and children -->
+                <div class="field is-horizontal mt-5">
+                  <!-- Adults -->
+                  <div class="field-body">
+                    <div class="field">
+                      <p class="control is-expanded has-icons-left">
+                        <input
+                          class="input is-medium"
+                          type="number"
+                          placeholder="Adults"
+                        />
+                        <span class="icon is-small is-left">
+                          <i class="fas fa-male"></i>
+                        </span>
+                      </p>
+                    </div>
+
+                    <!-- child -->
+                    <div class="field">
+                      <p class="control is-expanded has-icons-left">
+                        <input
+                          class="input is-medium"
+                          type="number"
+                          placeholder="Children"
+                        />
+                        <span class="icon is-small is-left">
+                          <i class="fas fa-child"></i>
+                        </span>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+              <!-- add comments -->
               <div class="field is-horizontal mt-5">
                 <div class="field-body">
                   <div class="field">
@@ -103,12 +218,14 @@
                 </div>
               </div>
 
+              <!-- checkbox subscribe to letters -->
               <label class="checkbox mt-5">
-              <input type="checkbox" />
-              I consent to receive news and offers via email from Pokot Tours and Travel
-            </label>
+                <input type="checkbox" />
+                I consent to receive news and offers via email from Pokot Tours
+                and Travel
+              </label>
 
-              <!-- button  -->
+              <!-- submit button  -->
               <div class="field is-horizontal mt-5">
                 <div class="field-body">
                   <div class="field">
@@ -119,8 +236,6 @@
                 </div>
               </div>
             </div>
-
-            
 
             <!-- contact details -->
             <div class="column is-6"></div>
