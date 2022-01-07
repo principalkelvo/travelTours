@@ -316,6 +316,9 @@
                 </div>
               </div>
             </div>
+            <div class="notification is-danger mt-4" v-if="errors.length">
+              <p v-for="error in errors" v-bind:key="error">{{error}}</p>
+            </div>
           </div>
 
           <!-- contact details -->
@@ -381,11 +384,22 @@ export default {
   name: "Contact",
   data(){
     return{
+      enquiry:'',
       first_name:'',
       surname:'',
       email:'',
       phone:'',
-      enquiry:'',
+      room_type:'',
+      package_type:'',
+      check_in:'',
+      check_out:'',
+      adults_no:'',
+      children_no:'',
+      wedding_date:'',
+      guests_no:'',
+      package_type_wed:'',
+      comment:'',
+      check:'',
       errors:[]
     }
   },
@@ -394,9 +408,12 @@ export default {
   },
   methods:{
     submitForm(){
+      this.errors=[]
       console.log('working')
       if(this.enquiry==="" ||this.enquiry==="Enquiry type *" ){
-        console.log('empty')
+        this.errors.push("please select enquiry type!")
+        console.log(errors.length)
+
       }
     }
   }
