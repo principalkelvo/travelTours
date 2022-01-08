@@ -8,6 +8,8 @@
           <!-- contact inputs -->
           <div class="column is-6">
             <!-- enquiry type -->
+            <label class="label mt-5 is-uppercase">Enquiry Type *</label>
+
             <div class="field is-horizontal">
               <div class="field-body">
                 <div class="field is-expanded">
@@ -64,6 +66,8 @@
             </div>
 
             <!-- email and phone -->
+            <label class="label mt-5 is-uppercase">contact *</label>
+
             <div class="field is-horizontal mt-5">
               <!-- email -->
               <div class="field-body">
@@ -406,7 +410,7 @@
                           class="input"
                           type="text"
                           placeholder="Request Package"
-                          v-model="Request_package"
+                          v-model="request_package"
                         />
                       </p>
                     </div>
@@ -507,6 +511,8 @@
             </template>
 
             <!-- add comments -->
+            <label class="label mt-5 is-uppercase">comment *</label>
+
             <div class="field is-horizontal mt-5">
               <div class="field-body">
                 <div class="field">
@@ -544,7 +550,7 @@
           </div>
 
           <!-- contact details -->
-          <div class="column is-6 details">
+          <div class="column is-6 details m-5">
             <div class="column">
               <h2 class="subtitle has-text-weight-bold is-uppercase">
                 Contact Us
