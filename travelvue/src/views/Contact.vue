@@ -103,186 +103,183 @@
             </div>
 
             <!-- reservation -->
-            <template v-if="enquiry==='Reservation enquiry'">
-            <div class="reservation pb-3">
-              <div class="title mt-5">
-                <h1>Reservation Details</h1>
-              </div>
-              <!-- room type -->
-              <div class="field is-horizontal mt-5">
-                <div class="field-body">
-                  <div class="field">
-                    <p class="control">
-                      <input
-                        class="input"
-                        type="text"
-                        v-model="room_type"
-                        placeholder="Room type"
-                      />
-                    </p>
+            <template v-if="enquiry === 'Reservation enquiry'">
+              <div class="reservation pb-3">
+                <div class="title mt-5">
+                  <h1>Reservation Details</h1>
+                </div>
+                <!-- room type -->
+                <div class="field is-horizontal mt-5">
+                  <div class="field-body">
+                    <div class="field">
+                      <p class="control">
+                        <input
+                          class="input"
+                          type="text"
+                          v-model="room_type"
+                          placeholder="Room type"
+                        />
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- package type -->
+                <div class="field is-horizontal mt-5">
+                  <div class="field-body">
+                    <div class="field">
+                      <p class="control">
+                        <input
+                          class="input"
+                          type="text"
+                          v-model="package_type"
+                          placeholder="Package type"
+                        />
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- date check-in/out -->
+                <div class="field is-horizontal mt-5">
+                  <!-- check-in -->
+                  <div class="field-body">
+                    <div class="field">
+                      <p class="control is-expanded has-icons-left">
+                        <input
+                          class="input is-medium"
+                          name="date"
+                          type="text"
+                          onfocus="(this.type='date')"
+                          onblur="if(!this.value)this.type='text'"
+                          placeholder="Check-in"
+                          v-model="check_in"
+                        />
+                        <span class="icon is-small is-left">
+                          <i class="fas fa-calendar"></i>
+                        </span>
+                      </p>
+                    </div>
+
+                    <!-- check-out -->
+                    <div class="field">
+                      <p class="control is-expanded has-icons-left">
+                        <input
+                          class="input is-medium"
+                          name="date"
+                          type="text"
+                          onfocus="(this.type='date')"
+                          onblur="if(!this.value)this.type='text'"
+                          placeholder="Check-out"
+                          v-model="check_out"
+                        />
+                        <span class="icon is-small is-left">
+                          <i class="fas fa-calendar"></i>
+                        </span>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- adults and children -->
+                <div class="field is-horizontal mt-5">
+                  <!-- Adults -->
+                  <div class="field-body">
+                    <div class="field">
+                      <p class="control is-expanded has-icons-left">
+                        <input
+                          class="input is-medium"
+                          type="number"
+                          placeholder="Adults"
+                          v-model="adults_no"
+                        />
+                        <span class="icon is-small is-left">
+                          <i class="fas fa-male"></i>
+                        </span>
+                      </p>
+                    </div>
+
+                    <!-- child -->
+                    <div class="field">
+                      <p class="control is-expanded has-icons-left">
+                        <input
+                          class="input is-medium"
+                          type="number"
+                          placeholder="Children"
+                          v-model="children_no"
+                        />
+                        <span class="icon is-small is-left">
+                          <i class="fas fa-child"></i>
+                        </span>
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
-
-              <!-- package type -->
-              <div class="field is-horizontal mt-5">
-                <div class="field-body">
-                  <div class="field">
-                    <p class="control">
-                      <input
-                        class="input"
-                        type="text"
-                        v-model="package_type"
-                        placeholder="Package type"
-                      />
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <!-- date check-in/out -->
-              <div class="field is-horizontal mt-5">
-                <!-- check-in -->
-                <div class="field-body">
-                  <div class="field">
-                    <p class="control is-expanded has-icons-left">
-                      <input
-                        class="input is-medium"
-                        name="date"
-                        type="text"
-                        onfocus="(this.type='date')"
-                        onblur="if(!this.value)this.type='text'"
-                        placeholder="Check-in"
-                        v-model="check_in"
-                      />
-                      <span class="icon is-small is-left">
-                        <i class="fas fa-calendar"></i>
-                      </span>
-                    </p>
-                  </div>
-
-                  <!-- check-out -->
-                  <div class="field">
-                    <p class="control is-expanded has-icons-left">
-                      <input
-                        class="input is-medium"
-                        name="date"
-                        type="text"
-                        onfocus="(this.type='date')"
-                        onblur="if(!this.value)this.type='text'"
-                        placeholder="Check-out"
-                        v-model="check_out"
-                      />
-                      <span class="icon is-small is-left">
-                        <i class="fas fa-calendar"></i>
-                      </span>
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <!-- adults and children -->
-              <div class="field is-horizontal mt-5">
-                <!-- Adults -->
-                <div class="field-body">
-                  <div class="field">
-                    <p class="control is-expanded has-icons-left">
-                      <input
-                        class="input is-medium"
-                        type="number"
-                        placeholder="Adults"
-                        v-model="adults_no"
-                      />
-                      <span class="icon is-small is-left">
-                        <i class="fas fa-male"></i>
-                      </span>
-                    </p>
-                  </div>
-
-                  <!-- child -->
-                  <div class="field">
-                    <p class="control is-expanded has-icons-left">
-                      <input
-                        class="input is-medium"
-                        type="number"
-                        placeholder="Children"
-                        v-model="children_no"
-                      />
-                      <span class="icon is-small is-left">
-                        <i class="fas fa-child"></i>
-                      </span>
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
             </template>
 
             <!-- wedding details -->
-            <template v-if="enquiry==='Wedding enquiry'">
-            <div class="wedding pb-3" >
-              <div class="title mt-5">
-                <h1>Wedding Details</h1>
-              </div>
+            <template v-if="enquiry === 'Wedding enquiry'">
+              <div class="wedding pb-3">
+                <div class="title mt-5">
+                  <h1>Wedding Details</h1>
+                </div>
 
-              <!-- wedding date -->
-              <div class="field is-horizontal mt-5">
-                <!-- check-in -->
-                <div class="field-body">
-                  <div class="field">
-                    <p class="control is-expanded has-icons-left">
-                      <input
-                        class="input is-medium"
-                        name="date"
-                        type="text"
-                        onfocus="(this.type='date')"
-                        onblur="if(!this.value)this.type='text'"
-                        placeholder="Wedding date"
-                        v-model="wedding_date"
-                      />
-                      <span class="icon is-small is-left">
-                        <i class="fas fa-calendar"></i>
-                      </span>
-                    </p>
+                <!-- wedding date -->
+                <div class="field is-horizontal mt-5">
+                  <!-- check-in -->
+                  <div class="field-body">
+                    <div class="field">
+                      <p class="control is-expanded has-icons-left">
+                        <input
+                          class="input is-medium"
+                          name="date"
+                          type="text"
+                          onfocus="(this.type='date')"
+                          onblur="if(!this.value)this.type='text'"
+                          placeholder="Wedding date"
+                          v-model="wedding_date"
+                        />
+                        <span class="icon is-small is-left">
+                          <i class="fas fa-calendar"></i>
+                        </span>
+                      </p>
+                    </div>
+
+                    <!-- number of guests -->
+                    <div class="field">
+                      <p class="control is-expanded has-icons-left">
+                        <input
+                          class="input is-medium"
+                          type="number"
+                          placeholder="Number of guests"
+                          v-model="guests_no"
+                        />
+                        <span class="icon is-small is-left">
+                          <i class="fas fa-church"></i>
+                        </span>
+                      </p>
+                    </div>
                   </div>
+                </div>
 
-
-                  <!-- number of guests -->
-                  <div class="field">
-                    <p class="control is-expanded has-icons-left">
-                      <input
-                        class="input is-medium"
-                        type="number"
-                        placeholder="Number of guests"
-                        v-model="guests_no"
-                      />
-                      <span class="icon is-small is-left">
-                        <i class="fas fa-church"></i>
-                      </span>
-                    </p>
+                <!-- Package type -->
+                <div class="field is-horizontal mt-5">
+                  <div class="field-body">
+                    <div class="field">
+                      <p class="control">
+                        <input
+                          class="input"
+                          type="text"
+                          placeholder="Request Package"
+                          v-model="package_type_wed"
+                        />
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
-
-              <!-- Package type -->
-              <div class="field is-horizontal mt-5">
-                <div class="field-body">
-                  <div class="field">
-                    <p class="control">
-                      <input
-                        class="input"
-                        type="text"
-                        placeholder="Request Package"
-                        v-model="package_type_wed"
-                      />
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
             </template>
-
-
 
             <!-- add comments -->
             <div class="field is-horizontal mt-5">
@@ -301,7 +298,7 @@
 
             <!-- checkbox subscribe to letters -->
             <label class="checkbox mt-5">
-              <input type="checkbox" v-model="check"/>
+              <input type="checkbox" v-model="check" />
               I consent to receive news and offers via email from Pokot Tours
               and Travel
             </label>
@@ -317,7 +314,7 @@
               </div>
             </div>
             <div class="notification is-danger mt-4" v-if="errors.length">
-              <p v-for="error in errors" v-bind:key="error">{{error}}</p>
+              <p v-for="error in errors" v-bind:key="error">{{ error }}</p>
             </div>
           </div>
 
@@ -382,48 +379,91 @@ import Fullwidth from "../components/Fullwidth_Carousel";
 
 export default {
   name: "Contact",
-  data(){
-    return{
-      enquiry:'',
-      first_name:'',
-      surname:'',
-      email:'',
-      phone:'',
-      room_type:'',
-      package_type:'',
-      check_in:'',
-      check_out:'',
-      adults_no:'',
-      children_no:'',
-      wedding_date:'',
-      guests_no:'',
-      package_type_wed:'',
-      comment:'',
-      check:'',
-      errors:[]
-    }
+  data() {
+    return {
+      enquiry: "",
+      first_name: "",
+      surname: "",
+      email: "",
+      phone: "",
+      room_type: "",
+      package_type: "",
+      check_in: "",
+      check_out: "",
+      adults_no: "",
+      children_no: "",
+      wedding_date: "",
+      guests_no: "",
+      package_type_wed: "",
+      comment: "",
+      check: "",
+      errors: [],
+    };
   },
   components: {
     Fullwidth,
   },
-  methods:{
-    submitForm(){
-      this.errors=[]
-      console.log('working')
-      if(this.enquiry==="" ||this.enquiry==="Enquiry type *" ){
-        this.errors.push("please select enquiry type!")
-        console.log(errors.length)
-
+  methods: {
+    submitForm() {
+      this.errors = [];
+      console.log("working");
+      if (this.enquiry === "" || this.enquiry === "Enquiry type *") {
+        this.errors.push("please select enquiry type!");
+      } else if (this.enquiry === "Wedding enquiry") {
+        if (this.wedding_date === "") {
+          this.errors.push("The wedding date field is missing!");
+        }
+        if (this.guests_no === "") {
+          this.errors.push("The guests field is missing!");
+        }
+        if (this.package_type_wed === "") {
+          this.errors.push("The package type field is missing!");
+        }
+      } else if(this.enquiry === "Reservation enquiry"){
+        if (this.room_type === "") {
+          this.errors.push("The room type field is missing!");
+        }
+        if (this.check_in === "") {
+          this.errors.push("The check in date field is missing!");
+        }
+        if (this.check_out === "") {
+          this.errors.push("The check out date field is missing!");
+        }
+        if (this.package_type === "") {
+          this.errors.push("The package type field is missing!");
+        }
+        if (this.adults_no < 0) {
+          this.errors.push("Adults field can not be a negative number");
+        }
+        if (this.children_no < 0) {
+          this.errors.push("Children field can not be a negative number");
+        }            
       }
-    }
-  }
+      if (this.first_name === "") {
+        this.errors.push("The first_name field is missing!");
+      }
+      if (this.surname === "") {
+        this.errors.push("The surname field is missing!");
+      }
+      if (this.email === "") {
+        this.errors.push("The email email is missing!");
+      }
+      if (this.phone === "") {
+        this.errors.push("The phone field is missing!");
+      }
+      if (this.comment === "") {
+        this.errors.push("The comment field is missing!");
+      }
+    },
+  },
 };
 </script>
 <style scoped>
 .details a {
   color: black;
   text-decoration: underline;
-  transition: color 0.25s ease-out, background-color 0.25s ease-out, border-color 0.25s ease-out;
+  transition: color 0.25s ease-out, background-color 0.25s ease-out,
+    border-color 0.25s ease-out;
 }
 a:hover {
   color: #660746;
