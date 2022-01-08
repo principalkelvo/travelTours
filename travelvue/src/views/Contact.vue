@@ -14,7 +14,6 @@
                   <div class="control">
                     <div class="select is-fullwidth is-medium">
                       <select v-model="enquiry">
-                        <option class="selected">Enquiry type *</option>
                         <option>General enquiry</option>
                         <option>Reservation enquiry</option>
                         <option>Conference enquiry</option>
@@ -28,9 +27,8 @@
 
             <!-- name and surname -->
             <label class="label mt-5 is-uppercase">Name *</label>
-            <div class="field ">
-            <label class="label is-uppercase "></label>
-              
+            <div class="field">
+              <label class="label is-uppercase"></label>
 
               <div class="field-body is-horizontal">
                 <!-- first name -->
@@ -427,22 +425,28 @@
                 </div>
                 <!-- interested in team building checkbox -->
                 <div class="field is-horizontal mt-5">
-                      <!-- Number of rooms -->
-                      <div class="field-body">
-                        <div class="field">
-                <label class="checkbox mt-5">
-                  <input type="checkbox" v-model="check_teambuilding" />
-                  Interested in Team Building
-                </label></div></div></div>
+                  <!-- Number of rooms -->
+                  <div class="field-body">
+                    <div class="field">
+                      <label class="checkbox mt-5">
+                        <input type="checkbox" v-model="check_teambuilding" />
+                        Interested in Team Building
+                      </label>
+                    </div>
+                  </div>
+                </div>
                 <!-- interested in accomodation checkbox -->
                 <div class="field is-horizontal mt-5">
-                      <!-- Number of rooms -->
-                      <div class="field-body">
-                        <div class="field">
-                <label class="checkbox mt-5">
-                  <input type="checkbox" v-model="check_accomodation" />
-                  Interested in accommodation
-                </label></div></div></div>
+                  <!-- Number of rooms -->
+                  <div class="field-body">
+                    <div class="field">
+                      <label class="checkbox mt-5">
+                        <input type="checkbox" v-model="check_accomodation" />
+                        Interested in accommodation
+                      </label>
+                    </div>
+                  </div>
+                </div>
                 <!-- Accomodation details -->
                 <template v-if="check_accomodation != ''">
                   <div class="conference pb-3">
@@ -624,23 +628,23 @@ export default {
       guests_no: "",
       package_type_wed: "",
 
-      //conference      
-      company_name:'',
-      conference_type:'',
-      arrival_date:'',
-      departure_date:'',
-      conference_room:'',
-      room_setup:'',
-      request_package:'',
+      //conference
+      company_name: "",
+      conference_type: "",
+      arrival_date: "",
+      departure_date: "",
+      conference_room: "",
+      room_setup: "",
+      request_package: "",
       //checkboxes
-      check_av:'',
-      check_teambuilding:'',
-      check_accomodation: " ",
-      
-      //conference book room      
-      rooms_no:'',
-      occupancy:'',
-      room_type:'',
+      check_av: "",
+      check_teambuilding: "",
+      check_accomodation: "",
+
+      //conference book room
+      rooms_no: "",
+      occupancy: "",
+      room_type: "",
 
       //errors
       errors: [],
@@ -650,16 +654,13 @@ export default {
     Fullwidth,
   },
   methods: {
-    
     submitForm() {
       this.errors = [];
-      if(this.check_accomodation!=""){
-        console.log('is checked')
-      }
+
       console.log("working");
-      if (this.enquiry === "" || this.enquiry === "Enquiry type *") {
+      if (this.enquiry === "") {
         this.errors.push("please select enquiry type!");
-      } 
+      }
       //wedding
       else if (this.enquiry === "Wedding enquiry") {
         if (this.wedding_date === "") {
@@ -671,7 +672,7 @@ export default {
         if (this.package_type_wed === "") {
           this.errors.push("The package type field is missing!");
         }
-      } 
+      }
       //reservation
       else if (this.enquiry === "Reservation enquiry") {
         if (this.room_type === "") {
@@ -694,41 +695,40 @@ export default {
         }
       }
       //conference details
-      else if(this.enquiry === "Conference enquiry"){
+      else if (this.enquiry === "Conference enquiry") {
         if (this.company_name === "") {
-        this.errors.push("The company name field is missing!");
-      }
-      if (this.conference_type === "") {
-        this.errors.push("The nature of conference field is missing!");
-      }
-      if (this.arrival_date === "") {
-        this.errors.push("The arrival date field is missing!");
-      }
-      if (this.departure_date === "") {
-        this.errors.push("The departure date field is missing!");
-      }
-      if (this.conference_room === "") {
-        this.errors.push("The conference room field is missing!");
-      }
-      if (this.room_setup === "") {
-        this.errors.push("The room set up field is missing!");
-      }
-      if (this.request_package === "") {
-        this.errors.push("The request package field is missing!");
-      }
-      
+          this.errors.push("The company name field is missing!");
+        }
+        if (this.conference_type === "") {
+          this.errors.push("The nature of conference field is missing!");
+        }
+        if (this.arrival_date === "") {
+          this.errors.push("The arrival date field is missing!");
+        }
+        if (this.departure_date === "") {
+          this.errors.push("The departure date field is missing!");
+        }
+        if (this.conference_room === "") {
+          this.errors.push("The conference room field is missing!");
+        }
+        if (this.room_setup === "") {
+          this.errors.push("The room set up field is missing!");
+        }
+        if (this.request_package === "") {
+          this.errors.push("The request package field is missing!");
+        }
       }
       //conference accomodation
-      else if(check_accomodation != ''){
+      else if (check_accomodation != "") {
         if (this.rooms_no === "") {
-        this.errors.push("The Number of rooms field is missing!");
-      }
-      if (this.occupancy < 0) {
-        this.errors.push("The occupancy field can not be a negative number!");
-      }
-      if (this.room_type === "") {
-        this.errors.push("The room type field is missing!");
-      }
+          this.errors.push("The Number of rooms field is missing!");
+        }
+        if (this.occupancy < 0) {
+          this.errors.push("The occupancy field can not be a negative number!");
+        }
+        if (this.room_type === "") {
+          this.errors.push("The room type field is missing!");
+        }
       }
       //general
       if (this.first_name === "") {
