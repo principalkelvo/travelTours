@@ -27,9 +27,13 @@
             </div>
 
             <!-- name and surname -->
-            <div class="field is-horizontal mt-5">
-              <!-- first name -->
-              <div class="field-body">
+            <label class="label mt-5 is-uppercase">Name *</label>
+            <div class="field ">
+            <label class="label is-uppercase "></label>
+              
+
+              <div class="field-body is-horizontal">
+                <!-- first name -->
                 <div class="field">
                   <p class="control is-expanded has-icons-left">
                     <input
@@ -281,6 +285,223 @@
               </div>
             </template>
 
+            <!-- conference details -->
+            <template v-if="enquiry === 'Conference enquiry'">
+              <div class="conference pb-3">
+                <div class="title mt-5">
+                  <h1>Conference Details</h1>
+                </div>
+
+                <!-- company name -->
+                <div class="field is-horizontal mt-5">
+                  <div class="field-body">
+                    <div class="field">
+                      <p class="control is-expanded has-icons-left">
+                        <input
+                          class="input is-medium"
+                          type="text"
+                          v-model="company_name"
+                          placeholder="Company Name"
+                        />
+                        <span class="icon is-small is-left">
+                          <i class="fas fa-meetuo"></i>
+                        </span>
+                      </p>
+                    </div>
+
+                    <!-- nature of conference -->
+                    <div class="field">
+                      <p class="control is-expanded has-icons-left">
+                        <input
+                          class="input is-medium"
+                          type="text"
+                          v-model="conference_type"
+                          placeholder="Nature of conference"
+                        />
+                        <span class="icon is-small is-left">
+                          <i class="fas fa-laptop"></i>
+                        </span>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- conference date -->
+                <div class="field is-horizontal mt-5">
+                  <!-- check-in -->
+                  <div class="field-body">
+                    <div class="field">
+                      <p class="control is-expanded has-icons-left">
+                        <input
+                          class="input is-medium"
+                          name="date"
+                          type="text"
+                          onfocus="(this.type='date')"
+                          onblur="if(!this.value)this.type='text'"
+                          placeholder="Arrival date"
+                          v-model="arrival_date"
+                        />
+                        <span class="icon is-small is-left">
+                          <i class="fas fa-calendar"></i>
+                        </span>
+                      </p>
+                    </div>
+
+                    <!-- departure date -->
+                    <div class="field">
+                      <p class="control is-expanded has-icons-left">
+                        <input
+                          class="input is-medium"
+                          name="date"
+                          type="text"
+                          onfocus="(this.type='date')"
+                          onblur="if(!this.value)this.type='text'"
+                          placeholder="Departure date"
+                          v-model="departure_date"
+                        />
+                        <span class="icon is-small is-left">
+                          <i class="fas fa-calendar"></i>
+                        </span>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Conference room -->
+                <div class="field is-horizontal mt-5">
+                  <div class="field-body">
+                    <div class="field">
+                      <p class="control">
+                        <input
+                          class="input"
+                          type="text"
+                          placeholder="Conference room"
+                          v-model="conference_room"
+                        />
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- room setup -->
+                <div class="field is-horizontal mt-5">
+                  <div class="field-body">
+                    <div class="field">
+                      <p class="control">
+                        <input
+                          class="input"
+                          type="text"
+                          placeholder="Room set up"
+                          v-model="room_setup"
+                        />
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- request package -->
+                <div class="field is-horizontal mt-5">
+                  <div class="field-body">
+                    <div class="field">
+                      <p class="control">
+                        <input
+                          class="input"
+                          type="text"
+                          placeholder="Request Package"
+                          v-model="Request_package"
+                        />
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <!-- Av equipment checkbox-->
+                <div class="field is-horizontal mt-5">
+                  <div class="field-body">
+                    <div class="field">
+                      <label class="checkbox mt-5">
+                        <input type="checkbox" v-model="check_av" />
+                        AudioVisuals Equipment Required?
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <!-- interested in team building checkbox -->
+                <div class="field is-horizontal mt-5">
+                      <!-- Number of rooms -->
+                      <div class="field-body">
+                        <div class="field">
+                <label class="checkbox mt-5">
+                  <input type="checkbox" v-model="check_teambuilding" />
+                  Interested in Team Building
+                </label></div></div></div>
+                <!-- interested in accomodation checkbox -->
+                <div class="field is-horizontal mt-5">
+                      <!-- Number of rooms -->
+                      <div class="field-body">
+                        <div class="field">
+                <label class="checkbox mt-5">
+                  <input type="checkbox" v-model="check_accomodation" />
+                  Interested in accommodation
+                </label></div></div></div>
+                <!-- Accomodation details -->
+                <template v-if="check_accomodation != ''">
+                  <div class="conference pb-3">
+                    <div class="title mt-5">
+                      <h1>Conference Details</h1>
+                    </div>
+                    <div class="field is-horizontal mt-5">
+                      <!-- Number of rooms -->
+                      <div class="field-body">
+                        <div class="field">
+                          <p class="control is-expanded has-icons-left">
+                            <input
+                              class="input is-medium"
+                              type="number"
+                              placeholder="Number of rooms"
+                              v-model="rooms_no"
+                            />
+                            <span class="icon is-small is-left">
+                              <i class="fas fa-home"></i>
+                            </span>
+                          </p>
+                        </div>
+
+                        <!-- occupancy -->
+                        <div class="field">
+                          <p class="control is-expanded has-icons-left">
+                            <input
+                              class="input is-medium"
+                              type="number"
+                              placeholder="Ocupancy"
+                              v-model="occupancy"
+                            />
+                            <span class="icon is-small is-left">
+                              <i class="fas fa-home"></i>
+                            </span>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- room type -->
+                    <div class="field is-horizontal mt-5">
+                      <div class="field-body">
+                        <div class="field">
+                          <p class="control">
+                            <input
+                              class="input"
+                              type="text"
+                              placeholder="Room type"
+                              v-model="room_type"
+                            />
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </template>
+              </div>
+            </template>
+
             <!-- add comments -->
             <div class="field is-horizontal mt-5">
               <div class="field-body">
@@ -397,6 +618,19 @@ export default {
       package_type_wed: "",
       comment: "",
       check: "",
+      check_accomodation: " ",
+      company_name:'',
+      conference_type:'',
+      arrival_date:'',
+      departure_date:'',
+      conference_room:'',
+      room_setup:'',
+      request_package:'',
+      chack_av:'',
+      check_teambuilding:'',
+      rooms_no:'',
+      occupancy:'',
+      room_type:'',
       errors: [],
     };
   },
@@ -404,8 +638,12 @@ export default {
     Fullwidth,
   },
   methods: {
+    
     submitForm() {
       this.errors = [];
+      if(this.check_accomodation!=""){
+        console.log('is checked')
+      }
       console.log("working");
       if (this.enquiry === "" || this.enquiry === "Enquiry type *") {
         this.errors.push("please select enquiry type!");
@@ -419,7 +657,7 @@ export default {
         if (this.package_type_wed === "") {
           this.errors.push("The package type field is missing!");
         }
-      } else if(this.enquiry === "Reservation enquiry"){
+      } else if (this.enquiry === "Reservation enquiry") {
         if (this.room_type === "") {
           this.errors.push("The room type field is missing!");
         }
@@ -437,7 +675,7 @@ export default {
         }
         if (this.children_no < 0) {
           this.errors.push("Children field can not be a negative number");
-        }            
+        }
       }
       if (this.first_name === "") {
         this.errors.push("The first_name field is missing!");
