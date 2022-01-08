@@ -328,7 +328,7 @@
 
                 <!-- conference date -->
                 <div class="field is-horizontal mt-5">
-                  <!-- check-in -->
+                  <!-- arrival date -->
                   <div class="field-body">
                     <div class="field">
                       <p class="control is-expanded has-icons-left">
@@ -472,7 +472,7 @@
                             <input
                               class="input is-medium"
                               type="number"
-                              placeholder="Ocupancy"
+                              placeholder="Occupancy"
                               v-model="occupancy"
                             />
                             <span class="icon is-small is-left">
@@ -602,23 +602,29 @@ export default {
   name: "Contact",
   data() {
     return {
+      //general
       enquiry: "",
       first_name: "",
       surname: "",
       email: "",
       phone: "",
+      comment: "",
+      check: "",
+
+      //reservation
       room_type: "",
       package_type: "",
       check_in: "",
       check_out: "",
       adults_no: "",
       children_no: "",
+
+      //wedding
       wedding_date: "",
       guests_no: "",
       package_type_wed: "",
-      comment: "",
-      check: "",
-      check_accomodation: " ",
+
+      //conference      
       company_name:'',
       conference_type:'',
       arrival_date:'',
@@ -626,11 +632,17 @@ export default {
       conference_room:'',
       room_setup:'',
       request_package:'',
-      chack_av:'',
+      //checkboxes
+      check_av:'',
       check_teambuilding:'',
+      check_accomodation: " ",
+      
+      //conference book room      
       rooms_no:'',
       occupancy:'',
       room_type:'',
+
+      //errors
       errors: [],
     };
   },
@@ -647,7 +659,9 @@ export default {
       console.log("working");
       if (this.enquiry === "" || this.enquiry === "Enquiry type *") {
         this.errors.push("please select enquiry type!");
-      } else if (this.enquiry === "Wedding enquiry") {
+      } 
+      //wedding
+      else if (this.enquiry === "Wedding enquiry") {
         if (this.wedding_date === "") {
           this.errors.push("The wedding date field is missing!");
         }
@@ -657,7 +671,9 @@ export default {
         if (this.package_type_wed === "") {
           this.errors.push("The package type field is missing!");
         }
-      } else if (this.enquiry === "Reservation enquiry") {
+      } 
+      //reservation
+      else if (this.enquiry === "Reservation enquiry") {
         if (this.room_type === "") {
           this.errors.push("The room type field is missing!");
         }
@@ -677,6 +693,44 @@ export default {
           this.errors.push("Children field can not be a negative number");
         }
       }
+      //conference details
+      else if(this.enquiry === "Conference enquiry"){
+        if (this.company_name === "") {
+        this.errors.push("The company name field is missing!");
+      }
+      if (this.conference_type === "") {
+        this.errors.push("The nature of conference field is missing!");
+      }
+      if (this.arrival_date === "") {
+        this.errors.push("The arrival date field is missing!");
+      }
+      if (this.departure_date === "") {
+        this.errors.push("The departure date field is missing!");
+      }
+      if (this.conference_room === "") {
+        this.errors.push("The conference room field is missing!");
+      }
+      if (this.room_setup === "") {
+        this.errors.push("The room set up field is missing!");
+      }
+      if (this.request_package === "") {
+        this.errors.push("The request package field is missing!");
+      }
+      
+      }
+      //conference accomodation
+      else if(check_accomodation != ''){
+        if (this.rooms_no === "") {
+        this.errors.push("The Number of rooms field is missing!");
+      }
+      if (this.occupancy < 0) {
+        this.errors.push("The occupancy field can not be a negative number!");
+      }
+      if (this.room_type === "") {
+        this.errors.push("The room type field is missing!");
+      }
+      }
+      //general
       if (this.first_name === "") {
         this.errors.push("The first_name field is missing!");
       }
@@ -688,6 +742,9 @@ export default {
       }
       if (this.phone === "") {
         this.errors.push("The phone field is missing!");
+      }
+      if (this.phone.length < 6) {
+        this.errors.push("The phone field is short!");
       }
       if (this.comment === "") {
         this.errors.push("The comment field is missing!");
