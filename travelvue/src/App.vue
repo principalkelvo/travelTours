@@ -56,6 +56,17 @@ section{
   border-color: #660746;
     color: #660746;
 }
+.button:active, .button.is-active {
+    background-color: #F9E2E3; 
+  border-color: #660746;
+    color: #660746;
+    box-shadow: 0 0 0 0.125em rgb(72 95 199 / 25%);
+}
+.button:focus, .button.is-focused {
+  background-color: #F9E2E3; 
+  border-color: #660746;
+    color: #660746;
+}
 @keyframes shake {
   0% { transform: translate(1px, 1px) rotate(0deg); }
   10% { transform: translate(-1px, -2px) rotate(-1deg); }
