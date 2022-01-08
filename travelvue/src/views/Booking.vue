@@ -1,7 +1,9 @@
 <template>
 <section>
-  <div class="about">
-    <h1>This is Booking page</h1>
+  <div class="about">    
+    <!--header corousel-->
+    <Fullwidth/>
+
   </div>
 </section>
 </template>
