@@ -266,7 +266,7 @@
                 />
               </div>
               <!--footer subscribe button-->
-              <div class="control">
+              <div class="control is-expanded">
                 <button class="button is-light is-normal">Subscribe</button>
               </div>
             </div>
@@ -361,40 +361,7 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-.carousel {
-  position: relative;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  .captions {
-    position: absolute;
-    z-index: 1;
-    width: 50%;
-    top: 5%;
-  }
-  //   .background-captions {
-  //     background: rgba(0, 0, 0, 0.5);
-  //     transition: 2s;
-  //     padding-top: 10px;
-  //     padding-bottom: 20px;
-  //     border-radius: 20px;
-  //   }
 
-  .slide-info {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    max-height: 100%;
-    height: 100%;
-    img {
-      border-radius: 10px;
-      min-width: 100%;
-      height: 100%;
-      object-fit: fill;
-    }
-  }
-}
 
 //top destination
 .top_shortcuts {
