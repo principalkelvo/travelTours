@@ -51,6 +51,12 @@ section{
   background-color: #660746;
   color: #ffffff;
 }
+//All titles
+h1::before {
+  content: "\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0";
+  text-decoration: line-through;
+  margin: auto 0.5em;
+}
 .button:hover, .button.is-hovered {   
   background-color: #F9E2E3; 
   border-color: #660746;
