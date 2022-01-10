@@ -1,5 +1,5 @@
 <template>
-  <div class="home">
+  <div class="home section">
     <!--header corousel-->
     <Fullwidth/>
 
@@ -203,7 +203,7 @@
     </section>
 
     <!-- About Us -->
-    <section class="about_us hero">
+    <section class="about_us section hero">
       <div class="hero-body">
       <div class="columns is-multiline">
         <!--About Us title-->
@@ -420,12 +420,7 @@ export default {
   position: absolute;
 }
 
-//All titles
-h1::before {
-  content: "\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0";
-  text-decoration: line-through;
-  margin: auto 0.5em;
-}
+
 
 //about us
 .hr{

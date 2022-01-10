@@ -1,6 +1,7 @@
 <template>
-  <div class="contact">
-    <Fullwidth />
+  <div class="contact section">
+    <!--header corousel-->
+      <Fullwidth />
 
     <section class="section hero">
       <div class="hero-body">
