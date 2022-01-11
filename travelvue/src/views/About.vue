@@ -43,6 +43,32 @@
       </div>
     </section>
 
+    <section class="about_us section hero">
+      <div class="hero-body">
+      <div class="columns is-multiline">
+        <!--About Us title-->
+        <div class="title column is-12">
+          <h2 class="is-size-5 has-text-centered">Our story</h2>
+          <div class="line">
+            <h1 class="is-size-2 has-text-centered has-text-weight-bold">GET TO KNOW OUR STORY</h1>
+          </div>
+        </div>
+      </div>
+
+      <div class="columns is-multiline is-centered">
+        <div class="column is-2">1
+          
+        </div>
+        <div class="column is-2">2</div>
+        <div class="column is-2">3</div>
+        <div class="column is-2">4</div>
+        <div class="column is-2">5</div>
+      </div>
+
+
+      </div>
+    </section>
+
   </div>
 </template>
 
