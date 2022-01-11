@@ -113,7 +113,7 @@
             <template v-if="enquiry === 'Reservation enquiry'">
               <div class="reservation pb-3">
                 <div class="title mt-5">
-                  <h1>Reservation Details</h1>
+                  <h2>Reservation Details</h2>
                 </div>
                 <!-- room type -->
                 <div class="field is-horizontal mt-5">
@@ -229,7 +229,7 @@
             <template v-if="enquiry === 'Wedding enquiry'">
               <div class="wedding pb-3">
                 <div class="title mt-5">
-                  <h1>Wedding Details</h1>
+                  <h2>Wedding Details</h2>
                 </div>
 
                 <!-- wedding date -->
@@ -292,7 +292,7 @@
             <template v-if="enquiry === 'Conference enquiry'">
               <div class="conference pb-3">
                 <div class="title mt-5">
-                  <h1>Conference Details</h1>
+                  <h2>Conference Details</h2>
                 </div>
 
                 <!-- company name -->
@@ -456,7 +456,7 @@
                 <template v-if="check_accomodation != ''">
                   <div class="conference pb-3">
                     <div class="title mt-5">
-                      <h1>Conference Details</h1>
+                      <h2>Accomodation Details</h2>
                     </div>
                     <div class="field is-horizontal mt-5">
                       <!-- Number of rooms -->
