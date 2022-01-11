@@ -4,7 +4,7 @@
     <Fullwidth />
 
     <!-- About Us -->
-    <section class="about_us section hero">
+    <section class="about_us hero">
       <div class="hero-body">
         <div class="columns is-multiline">
           <!--About Us title-->
@@ -45,56 +45,56 @@
       </div>
     </section>
 
-    <section class="about_us section hero">
+    <!-- get to know us -->
+    <section class="get_to_know hero">
       <div class="hero-body">
         <div class="columns is-multiline">
-          <!--About Us title-->
-          <div class="title column is-12">
-            <h2 class="is-size-5 has-text-centered">Our story</h2>
-            <div class="line">
-              <h1 class="is-size-2 has-text-centered has-text-weight-bold">
-                GET TO KNOW OUR STORY
-              </h1>
-            </div>
+          <!--Get to know Us title-->
+          <div class="title column is-12 has-text-centered">
+            <h2 class="is-size-5">Our story</h2>
+            <h1 class="is-size-2 has-text-weight-bold">
+              GET TO KNOW OUR STORY
+            </h1>
           </div>
         </div>
 
+        <!-- icons and text -->
         <div class="columns is-multiline is-centered pt-6 mb-2">
           <div class="column is-2">
-            
             <div class="beach shortcuts has-text-centered">
               <a href="#" class="icon"
                 ><i class="fas fa-umbrella-beach"></i>
               </a>
-              <p class="has-text-weight-bold">Beach</p>
+              <p class="has-text-weight-bold pt-3">Beach</p>
+              <p class="has-text-weight-light">2 destinations</p>
             </div>
           </div>
           <div class="column is-2">
-            
             <div class="beach shortcuts has-text-centered">
               <a href="#" class="icon"><i class="fas fa-briefcase"></i> </a>
-              <p class="has-text-weight-bold">Low Budget</p>
+              <p class="has-text-weight-bold pt-3">Low Budget</p>
+              <p class="has-text-weight-light">4 destinations</p>
             </div>
           </div>
           <div class="column is-2">
-            
             <div class="beach shortcuts">
               <a href="#" class="icon"><i class="fas fa-bus-alt"></i> </a>
-              <p class="has-text-weight-bold"> Adventure</p>
+              <p class="has-text-weight-bold pt-3">Adventure</p>
+              <p class="has-text-weight-light">13 destinations</p>
             </div>
           </div>
           <div class="column is-2">
-            
             <div class="beach shortcuts">
               <a href="#" class="icon"><i class="fas fa-route"></i> </a>
-              <p class="has-text-weight-bold">Popular</p>
+              <p class="has-text-weight-bold pt-3">Popular</p>
+              <p class="has-text-weight-light">4 destinations</p>
             </div>
           </div>
           <div class="column is-2">
-            
             <div class="beach shortcuts">
               <a href="#" class="icon"><i class="fas fa-fire"></i> </a>
-              <p class="has-text-weight-bold">Camping</p>
+              <p class="has-text-weight-bold pt-3">Camping</p>
+              <p class="has-text-weight-light">1 destination</p>
             </div>
           </div>
         </div>
@@ -102,16 +102,75 @@
           <div class="column is-7 has-text-centered">
             <p class="subtitle">
               We offer the best limits on our top-rated visit bundles to clients
-              who pick our viable administrations over and over.<br> How about we
-              remind you indeed that we don’t expect to be your visit and travel
-              specialists; we endeavor to be your vacation accomplices until the
-              end of time.
+              who pick our viable administrations over and over.<br />
+              How about we remind you indeed that we don’t expect to be your
+              visit and travel specialists; we endeavor to be your vacation
+              accomplices until the end of time.
             </p>
           </div>
         </div>
-          <div class="has-text-centered mt-3 column">
-            <button class="button">Enquire</button>
+        <div class="has-text-centered mt-3 column">
+          <button class="button">Enquire</button>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- team -->
+    <section class="team  hero">
+      <div class="hero-body">
+        <div class="columns is-multiline">
+          <!--team title-->
+          <div class="title column is-12 has-text-centered">
+            <h2 class="is-size-5">Our team</h2>
+            <h1 class="is-size-2 has-text-weight-bold">MEET OUR TEAM</h1>
           </div>
+        </div>
+
+        <div class="columns is-multiline">
+          <div class="column is-4">
+            <figure class="image is-4by5">
+              <img src="../assets/fullheight/kelvin.jpg" alt="" />
+            </figure>
+          </div>
+          <div class="column is-4">
+            <figure class="image is-4by5">
+              <img src="../assets/fullheight/mama-sham.jpeg" alt="" />
+            </figure>
+          </div>
+          <div class="column is-4">
+            <figure class="image is-4by5">
+              <img src="../assets/fullheight/kelvin.jpg" alt="" />
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="customer hero">
+      <div class="hero-body">
+        <div class="columns is-multiline">
+          <!--customer title-->
+          <div class="title column is-12 has-text-centered">
+            <h2 class="is-size-5">Reviews and ratings</h2>
+            <h1 class="is-size-2 has-text-weight-bold">CUSTOMER REVIEWS</h1>
+          </div>
+        </div>
+        
+        <div class="columns is-multiline">
+          <div class="column is-12 review is-fullwidth">
+            <div class=" profile has-text-centered">
+              50
+            </div>
+
+          </div>
+        </div>
+        <div class="columns is-multiline pt-5">
+          <div class="column is-12 review is-fullwidth">
+
+          </div>
+        </div>
+
       </div>
     </section>
   </div>
@@ -138,6 +197,7 @@ export default {
   letter-spacing: 0.105em;
 
   .icon {
+    // border: #000000 solid;
     font-size: 3.8em;
     margin-top: 10px;
     text-decoration: none;
@@ -150,5 +210,18 @@ export default {
     // border: 3px solid;
     color: #000000;
   }
+}
+.review{
+  border:#000000 solid;
+  color: #ff0000;
+  height: 20vh;
+}
+.profile{
+  background: #ff0000;
+  border:#ffffff solid;
+  color: #ffffff;
+  border-radius: 50%;
+  width:7em;
+  height: 7em;
 }
 </style>
