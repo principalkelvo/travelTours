@@ -109,6 +109,9 @@
             </p>
           </div>
         </div>
+          <div class="has-text-centered mt-3 column">
+            <button class="button">Enquire</button>
+          </div>
       </div>
     </section>
   </div>
