@@ -4,7 +4,7 @@
       <div class="container">
         <div class="columns has-text-white">
           <div class="column is-4 is-offset-4">
-            <h1 class="title has-text-white">Sign up</h1>
+            <h1 class="title has-text-white">Sign Up</h1>
             <form @submit.prevent="submitForm" class="is-justify-content-center">
               <div class="field">
                 <label>Email</label>

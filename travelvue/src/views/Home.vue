@@ -68,7 +68,7 @@
         <div class="columns is-multiline">
           <!--Our Tour Package title-->
           <div class="title column is-12">
-            <h2 class="is-size-5 has-text-centered">see amazing capture</h2>
+            <h2 class="is-size-5 has-text-centered">See amazing capture</h2>
             <div class="line">
               <h1 class="is-size-2 has-text-centered has-text-weight-bold">
                 OUR TOUR PACKAGE
@@ -108,7 +108,7 @@
         <div class="columns is-multiline">
           <!--Our Travel Tips title-->
           <div class="title column is-12">
-            <h2 class="is-size-5 has-text-centered">Go for Categories</h2>
+            <h2 class="is-size-5 has-text-centered">Go for categories</h2>
             <div class="line">
               <h1 class="is-size-2 has-text-centered has-text-weight-bold">
                 TRAVEL TIPS
@@ -162,7 +162,7 @@
         <div class="columns is-multiline">
           <!--Our services title-->
           <div class="title column is-12">
-            <h2 class="is-size-5 has-text-centered">we fulfil your need</h2>
+            <h2 class="is-size-5 has-text-centered">We fulfil your need</h2>
             <div class="line">
               <h1 class="is-size-2 has-text-centered has-text-weight-bold">
                 SERVICES
@@ -348,7 +348,7 @@
                 </ul>
               </div>
               <div class="about column is-4">
-                <h2 class="subtitle mb-1">About us</h2>
+                <h2 class="subtitle mb-1">About Us</h2>
                 <ul class="mb-1">
                   Get to know us
                 </ul>
