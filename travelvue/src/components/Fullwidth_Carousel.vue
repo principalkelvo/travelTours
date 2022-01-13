@@ -1,52 +1,49 @@
 <template>
- <section class="hero is-medium mb-6">
-      <!--carousel-->
-      <div>
-        <Carousel
-          :navigation="true"
-          :pagination="true"
-          :startAutoPlay="true"
-          :timeout="4000"
-          class="carousel hero-body"
-          v-slot="{ currentSlide }"
-        >
-          <!--the captions-->
-          <div class="has-text-centered captions">
-            <div class="background-captions">
-              <p class="title mb-6">Welcome to Djackets</p>
-              <p class="subtitle">The best jacket store online</p>
-            </div>
+  <section class="hero is-medium mb-6">
+    <!--carousel-->
+    <div>
+      <Carousel
+        :navigation="true"
+        :pagination="true"
+        :startAutoPlay="true"
+        :timeout="4000"
+        class="carousel hero-body"
+        v-slot="{ currentSlide }"
+      >
+        <!--the captions-->
+        <div class="has-text-left captions">
+          <div class="background-captions">
+            <p class="title mb-6 is-uppercase">Welcome to Pokot</p>
+            <p class="subtitle">Kenya spectacular sceneries</p>
           </div>
+        </div>
 
-          <!--background images-->
-          <Slide v-for="(slide, index) in carouselSlides" :key="index">
-            <div
-              v-show="currentSlide === index + 1"
-              class="slide-info image is-fullwidth"
-            >
-              <img
-                :src="require(`../assets/${slide}.jpg`)"
-                alt=""
-                class="has-ratio"
-              />
-            </div>
-          </Slide>
-        </Carousel>
-      </div>
-    </section>
+        <!--background images-->
+        <Slide v-for="(slide, index) in carouselSlides" :key="index">
+          <div
+            v-show="currentSlide === index + 1"
+            class="slide-info image is-fullwidth"
+          >
+            <img
+              :src="require(`../assets/${slide}.jpg`)"
+              alt=""
+              class="has-ratio"
+            />
+          </div>
+        </Slide>
+      </Carousel>
+    </div>
+  </section>
 </template>
 
 <script>
-
 import axios from "axios";
 import Carousel from "../components/Carousel.vue";
 import Slide from "../components/Slide.vue";
 
 export default {
-    name:'Fullwidth',
-    data() {
-    return {};
-  },
+  name: "Fullwidth",
+  data() {},
   components: {
     Carousel,
     Slide,
@@ -65,19 +62,24 @@ export default {
   },
   mounted() {},
   methods: {},
-}
+};
 </script>
 <style lang="scss">
 .carousel {
   position: relative;
   height: 100vh;
   display: flex;
-  justify-content: center;
+  // justify-content: center;
   .captions {
     position: absolute;
     z-index: 1;
     width: 50%;
-    top: 5%;
+    bottom: 20%;
+    left: 3%;
+    p {
+      color: rgb(255, 255, 255);
+      font-weight: 900;
+    }
   }
   //   .background-captions {
   //     background: rgba(0, 0, 0, 0.5);
