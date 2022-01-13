@@ -7,6 +7,7 @@ class TripSerializer(serializers.ModelSerializer):
         fields =(
             "id",
             "name",
+            'rate',
             "get_absolute_url",
             "description",
             "price",

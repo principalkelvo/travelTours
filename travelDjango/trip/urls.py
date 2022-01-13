@@ -4,4 +4,5 @@ from trip import views
 
 urlpatterns = [
     path('latest-trips/',views.LatestTripList.as_view()),
+    path('popular-trips/',views.PopularTripList.as_view()),
 ]
