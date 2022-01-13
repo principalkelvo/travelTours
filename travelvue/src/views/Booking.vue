@@ -6,7 +6,7 @@
     <div class="columns is-multiline">
       <div class="column is-12">
         <h2 class="is-size-2 has-text-weight-bold has-text-centered">
-          Featured Offers 😋
+          Featured Offers <b style="color:red">❤</b>
         </h2>
       </div>
 
