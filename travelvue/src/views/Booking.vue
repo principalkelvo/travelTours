@@ -1,5 +1,5 @@
 <template>
-  <div class="Booking section">
+  <div class="booking section">
     <!--header corousel-->
     <Fullwidth />
 
