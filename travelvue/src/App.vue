@@ -50,6 +50,7 @@ section{
 .button{
   background-color: #660746;
   color: #ffffff;
+  transition: background-color 1s, color 1s;
 }
 //All titles
 h1::before {
