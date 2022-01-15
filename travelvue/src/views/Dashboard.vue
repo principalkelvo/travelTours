@@ -1,12 +1,22 @@
 <template>
+<div class="section">
   <Asidebar />
+  <section class="section is-fullwidth">
+    <div class="columns is-multiline">
+    <TripView/>
+    </div>
+  </section>
+  
+</div>
 </template>
 <script>
 import Asidebar from "@/components/Asidebar.vue";
+import TripView from "@/components/trip/TripView.vue"
 export default {
   name: "Dashboard",
   components: {
     Asidebar,
+    TripView
   },
   //  beforeCreate: function() {
   //     document.body.className = 'dashboard';
@@ -35,6 +45,7 @@ export default {
     overflow-x: hidden;
     width: 100vw;
   }
+  
 }
 
 @keyframes slideInFromLeft {
