@@ -8,6 +8,7 @@ class TripSerializer(serializers.ModelSerializer):
             "id",
             "name",
             'rate',
+            'activities',
             "get_absolute_url",
             "description",
             "price",

@@ -1,3 +1,4 @@
+from multiselectfield import MultiSelectField
 from io import BytesIO #for image resizing
 from PIL import Image
 from django.core.files import File
@@ -21,6 +22,23 @@ class Category(models.Model):
             return f'/{self.slug}/'
 
 class Trip(models.Model):
+     #creating the choices for status
+    HIKING= 'hiking'
+    BOAT_RIDING= 'Boat Riding'
+    BOARD_GAMES= 'Board Games'
+    BONFIRE= 'Bonfire'
+    SWIMMING= 'Swimming'
+
+    CHOICES_STATUS=(
+        (HIKING,'hiking'),
+        (BOAT_RIDING,'Boat Riding'),
+        (BOARD_GAMES,'Board Games'),
+        (BONFIRE,'Bonfire'),
+        (SWIMMING,'Swimming'),
+    )
+
+
+
     category = models.ForeignKey(Category, related_name='trips', on_delete=models.CASCADE)
     name = models.CharField(max_length=255)
     slug = models.SlugField()
@@ -30,6 +48,7 @@ class Trip(models.Model):
     image = models.ImageField(upload_to='uploads/', blank= True, null=True)
     thumbnail = models.ImageField(upload_to='uploads/', blank= True, null=True)
     date_added = models.DateTimeField(auto_now_add=True)
+    activities = MultiSelectField(choices=CHOICES_STATUS)
 
     class Meta:
         ordering =('-date_added',) #sort by date #added negative to descending order
