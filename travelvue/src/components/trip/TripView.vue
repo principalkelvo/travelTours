@@ -1,13 +1,13 @@
 <template>
 <div class="product">
-    <div class="product-small-img">
+    <div class="image product-small-img">
         <img src="@/assets/fullwidth/alec-brunelle--G5fUA5Zk_U-unsplash.jpg" @click="myfunction(this)">
         <img src="@/assets/fullwidth/alec-brunelle--G5fUA5Zk_U-unsplash.jpg" @click="myfunction(this)">
         <img src="@/assets/fullwidth/alec-brunelle--G5fUA5Zk_U-unsplash.jpg" @click="myfunction(this)">
         <img src="@/assets/fullwidth/alec-brunelle--G5fUA5Zk_U-unsplash.jpg" @click="myfunction(this)">
         <img src="@/assets/fullwidth/alec-brunelle--G5fUA5Zk_U-unsplash.jpg" @click="myfunction(this)">
     </div>
-    <div class="img-container">
+    <div class="img-container image">
         <img src="@/assets/fullwidth/alec-brunelle--G5fUA5Zk_U-unsplash.jpg" id="imageBox">
     </div>
 </div>
@@ -17,17 +17,14 @@
 export default {
     name:'TripView',
     data(){
-        var fullImg = document.getElementById("imageBox")
+        
         return{
         }
     },
     methods:{
         myfunction(smallImg){
-        
-            
-            fullImg.src = smallImg.src;
-            console.log(smallImg.src +'small')
-            console.log(fullImg.src +'big')
+            var fullImg = document.getElementById("imageBox")
+            smallImg.src= fullImg.src
             this.fullImg= this.fullImg
         }
     }
@@ -36,8 +33,8 @@ export default {
 <style scoped>
 
 .product-small-img img{
-    height: 92px;
-    margin: 10px 0;
+    height: 2.5em;
+    margin: 1em 0;
     cursor: pointer;
     display: block;
     opacity: .5;
@@ -48,35 +45,39 @@ export default {
 .product-small-img{
     float: left;
 }
-/* .product{
-    top: 10%;
-    left: 14rem;
-    transform: translate(-50%,-50%);
-    position: absolute;
-} */
 
 .img-container img{
-    height: 500px;
+    height: 16.5em;
 }
 .img-container{
     float: right;
-    padding: 10px;
+    padding: 1em;
 }
-@media (max-width: 1023px) {
-  .img-container img{
-    min-height: 125px;
+/* @media (max-width:767px) {
+    .portfolio img {
+        max-width: 100%;
+        max-height: 100%;
+    }
 }
-.img-container{
-    float: right;
-    padding: 10px;
+
+@media (min-width:768px) {
+    .portfolio img {
+        max-width: 240px;
+        max-height: 240px;
+    }
 }
-.product-small-img img{
-    min-height: 23px;
-    margin: 10px 0;
-    cursor: pointer;
-    display: block;
-    opacity: .5;
+
+@media (min-width:992px) {
+    .portfolio img {
+        max-width: 314px;
+        max-height: 314px;
+    }
 }
-  
-}
+
+@media (min-width:1200px) {
+    .portfolio img {
+        max-width: 380px;
+        max-height: 380px;
+    }
+} */
 </style>
