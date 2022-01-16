@@ -1,12 +1,16 @@
 from django.http import Http404
 from django.shortcuts import render
+from rest_framework import pagination
 
+from rest_framework.pagination import PageNumberPagination
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from .models import Trip
 from .serializers import TripSerializer
 # Create your views here.
 
+class TripPagination(PageNumberPagination):
+    page_size= 4
 class LatestTripList(APIView): #viewset to get latest trips to show in frontend
     def get(self,request, format= None):
         trips = Trip.objects.all()[0:8] #this shows number of items to be shown in latest trips
@@ -17,6 +21,7 @@ class PopularTripList(APIView): #viewset to get popular trips to show in fronten
     def get(self,request, format= None):
         trips = Trip.objects.order_by('-rate') [0:8] #this shows number of items to be shown in popular trips
         serializer =TripSerializer(trips, many=True)
+        pagination_class = TripPagination
         return Response(serializer.data)
 
 class TripDetail(APIView):
