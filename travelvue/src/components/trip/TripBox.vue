@@ -1,7 +1,7 @@
 <template>
   <div class="column is-3">
     <div class="box">
-      <figure class="image mb-3 is-4by5">
+      <figure class="image mb-3">
         <img v-bind:src="trip.get_thumbnail" />
       </figure>
       <h3 class="is-size-4">{{ trip.name }}</h3>
@@ -43,5 +43,7 @@ export default {
   margin-right: -1.25rem;
   border-radius: 10%;
   transition: border-radius 1s;
+  height: 12em;
+  width:100%;
 }
 </style>
