@@ -160,7 +160,6 @@
         <div class="columns is-multiline">
           <div class="column is-12 review is-fullwidth">
             <div class=" profile has-text-centered">
-              50
             </div>
 
           </div>
@@ -212,16 +211,24 @@ export default {
   }
 }
 .review{
-  border:#000000 solid;
+  border:#660746 solid;
   color: #ff0000;
   height: 20vh;
 }
 .profile{
-  background: #ff0000;
-  border:#ffffff solid;
-  color: #ffffff;
-  border-radius: 50%;
   width:7em;
   height: 7em;
+  background: url('../assets/fullheight/mama-sham.jpeg');
+  border: 2px #660746;
+  color: #f9e2e3;
+  border-radius: 50%;
+  background-repeat: round;
+  /* change to black and white  */
+    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0*/
+    filter: grayscale(100%);
+  transition: box-shadow .6s ease-in-out;
+}
+.profile:hover{
+  box-shadow: 0 0 0 0.125em rgb(102 7 70 / 25%);
 }
 </style>
