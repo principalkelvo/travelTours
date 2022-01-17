@@ -1,21 +1,24 @@
 <template>
-<div class="section">
+<div class="">
   <Asidebar />
-  <section class="section is-fullwidth">
-    <div class="columns is-multiline">
-    <TripView/>
-    </div>
+  <Halfwidth />
+  <TripView/>
+  <section class="section">
+
   </section>
+  
   
 </div>
 </template>
 <script>
 import Asidebar from "@/components/Asidebar.vue";
+import Halfwidth from "@/components/Halfwidth_Carousel.vue";
 import TripView from "@/components/trip/TripView.vue"
 export default {
   name: "Dashboard",
   components: {
     Asidebar,
+    Halfwidth,
     TripView
   },
   //  beforeCreate: function() {
