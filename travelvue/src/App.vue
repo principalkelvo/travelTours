@@ -47,10 +47,8 @@ section{
   background: #F9E2E3;
   padding: 22px;
 }
-.button{
-  background-color: #660746;
-  color: #ffffff;
-  transition: background-color 1s, color 1s;
+img{
+  object-fit: cover;
 }
 //All titles
 h1::before {
@@ -58,6 +56,14 @@ h1::before {
   text-decoration: line-through;
   margin: auto 0.5em;
 }
+
+
+.button{
+  background-color: #660746;
+  color: #ffffff;
+  transition: background-color 1s, color 1s;
+}
+
 .button:hover, .button.is-hovered {   
   background-color: #F9E2E3; 
   border-color: #660746;
