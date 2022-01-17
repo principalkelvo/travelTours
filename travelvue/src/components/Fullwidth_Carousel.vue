@@ -64,7 +64,7 @@ export default {
   methods: {},
 };
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
 .carousel {
   position: relative;
   height: 100vh;
@@ -100,7 +100,7 @@ export default {
       border-radius: 10px;
       min-width: 100%;
       height: 100%;
-      object-fit: fill;
+      object-fit: cover;
     }
   }
 }
