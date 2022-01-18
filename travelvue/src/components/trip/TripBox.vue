@@ -45,5 +45,6 @@ export default {
   transition: border-radius 1s;
   height: 12em;
   width:100%;
+  max-width:100%;
 }
 </style>

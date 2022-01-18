@@ -13,7 +13,7 @@
         <!--the captions-->
         <div class="has-text-left captions">
           <div class="background-captions">
-            <p class="title mb-6 is-uppercase">Welcome to Pokot</p>
+            <p class="title mb-4 is-uppercase">Welcome to Pokot</p>
             <p class="subtitle">Kenya spectacular sceneries</p>
           </div>
         </div>
@@ -79,6 +79,7 @@ export default {
     p {
       color: rgb(255, 255, 255);
       font-weight: 900;
+      text-shadow: 1px 0px 5px rgba(0, 0, 0);
     }
   }
   //   .background-captions {
