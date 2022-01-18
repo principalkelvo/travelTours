@@ -11,15 +11,15 @@
           <p>{{ trip.description }}</p>
         </div>
         <div class="column is-5 has-text-centered">
-          <div class="field mb-6 ">
+          <div class="field">
             <div class="control ">
               <button class="button">Book Now</button>
             </div>
           </div>
-          <div class="field activities is-centered">
+          <div class="field activities p-2">
           <h2 class="subtitle has-text-weight-medium">Activities</h2>
-          <ul>
-              <li></li>
+          <ul class="is-capitalized ">
+              <li v-for="activities in trip.activities" :key="activities">{{activities}}</li>
           </ul>
           </div>
         </div>
@@ -129,11 +129,12 @@ a:focus {
     font-size: 1.6em;
 }
 h2.subtitle{
-    letter-spacing: .3em;
+    letter-spacing: .2em;
 }
 .activities{
     border: #660746 solid 2px;
-    width: 60%;
+    margin: 10% 25%;
 
 }
+
 </style>
