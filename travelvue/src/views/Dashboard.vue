@@ -2,7 +2,6 @@
 <div class="">
   <Asidebar />
   <Halfwidth />
-  <TripView/>
   <section class="section">
 
   </section>
@@ -13,13 +12,11 @@
 <script>
 import Asidebar from "@/components/Asidebar.vue";
 import Halfwidth from "@/components/Halfwidth_Carousel.vue";
-import TripView from "@/components/trip/TripView.vue"
 export default {
   name: "Dashboard",
   components: {
     Asidebar,
     Halfwidth,
-    TripView
   },
   //  beforeCreate: function() {
   //     document.body.className = 'dashboard';
