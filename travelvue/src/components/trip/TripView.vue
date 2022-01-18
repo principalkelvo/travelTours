@@ -1,57 +1,103 @@
 <template>
-<div class="product">
-    <div class="image product-small-img">
-        <img src="@/assets/fullwidth/alec-brunelle--G5fUA5Zk_U-unsplash.jpg" @click="myfunction(this)">
-        <img src="@/assets/fullwidth/alec-brunelle--G5fUA5Zk_U-unsplash.jpg" @click="myfunction(this)">
-        <img src="@/assets/fullwidth/alec-brunelle--G5fUA5Zk_U-unsplash.jpg" @click="myfunction(this)">
-        <img src="@/assets/fullwidth/alec-brunelle--G5fUA5Zk_U-unsplash.jpg" @click="myfunction(this)">
-        <img src="@/assets/fullwidth/alec-brunelle--G5fUA5Zk_U-unsplash.jpg" @click="myfunction(this)">
+    <!--carousel-->
+    <section class="section hero">
+      <div class="hero-body">
+    <div class="columns">
+      <div class="product column is-6 ">
+        
+        <div class="field">
+          <div class="field-body">
+        <div class="img-container image">
+          <img
+            v-bind:src="productImage"
+            
+          />
+        
+        </div>
+        </div>
+        </div>
+        <div class="field is-horizontal">
+          <div class="field-body">
+        <div class="image product-small-img">
+          <img v-for="variant in variants"
+            :key="variant.variantId"
+            @click="updateImage(variant.variantImage)"
+           v-bind:src="variant.variantImage">
+        </div>
+        </div>
+        </div>
+      </div>
     </div>
-    <div class="img-container image">
-        <img src="@/assets/fullwidth/alec-brunelle--G5fUA5Zk_U-unsplash.jpg" id="imageBox">
-    </div>
-</div>
+      </div>
+    </section>
 </template>
 
 <script>
 export default {
-    name:'TripView',
-    data(){
-        
-        return{
+  name: "TripView",
+  data() {
+    return {
+      productImage:require("@/assets/fullwidth/alec-brunelle--G5fUA5Zk_U-unsplash.jpg"),
+      variants:[
+        {
+          variantId:1,
+          variantImage:require("@/assets/fullwidth/pawan-sharma-m41i9RcGcAo-unsplash.jpg")
+        },
+        {
+          variantId:2,
+          variantImage:require("@/assets/fullwidth/lunch.jpg")
+        },
+        {
+          variantId:3,
+          variantImage:require("@/assets/fullwidth/sandy-millar-YeJWDWeIZho-unsplash.jpg")
+        },
+        {
+          variantId:4,
+          variantImage:require("@/assets/fullwidth/windows-4nSKsoYyuPQ-unsplash.jpg")
+        },
+        {
+          variantId:5,
+          variantImage:require("@/assets/fullwidth/sutirta-budiman-Wdq1B_wZQUQ-unsplash.jpg")
         }
-    },
-    methods:{
-        myfunction(smallImg){
-            var fullImg = document.getElementById("imageBox")
-            smallImg.src= fullImg.src
-            this.fullImg= this.fullImg
-        }
+      ]
+    };
+  },
+  methods: {
+    updateImage(variantImage){
+      this.productImage = variantImage;
     }
-}
+  },
+};
 </script>
 <style scoped>
+.product-small-img img {
+  height: 4.5em;
+  width: 4.5em;
+  padding: .5em;
+  margin: .2em;
+  cursor: pointer;
+  display: block;
+  opacity: 0.5;
+}
+.product-small-img img:hover {
+  opacity: 1;
+}
+.product-small-img {
+  display: inline-flex;
 
-.product-small-img img{
-    height: 2.5em;
-    margin: 1em 0;
-    cursor: pointer;
-    display: block;
-    opacity: .5;
-}
-.product-small-img img:hover{
-    opacity: 1;
-}
-.product-small-img{
-    float: left;
 }
 
-.img-container img{
-    height: 16.5em;
+.img-container img {
+  height: 16.5em;
 }
-.img-container{
-    float: right;
-    padding: 1em;
+.img-container {
+  float: right;
+  width: 80%;
+
+}
+.product{
+  border: 2px solid;
+  
 }
 /* @media (max-width:767px) {
     .portfolio img {
