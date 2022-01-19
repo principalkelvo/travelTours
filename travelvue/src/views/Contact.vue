@@ -765,7 +765,7 @@ export default {
   color: black;
   text-decoration: underline;
   transition: color 0.25s ease-out, background-color 0.25s ease-out,
-    border-color 0.25s ease-out;
+    text-decoration 0.25s ease-out;
 }
 a:hover {
   color: #660746;
