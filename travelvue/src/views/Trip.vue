@@ -3,9 +3,22 @@
     <div class="page-product">
       <div class="columns is-multiline is-centered">
         <div class="column is-7">
+          <div class="has-text-centered">
           <figure class="image mb-3 is-5by3">
             <img v-bind:src="trip.get_image" />
           </figure>
+
+          <div class="image product-small-img">
+            <img
+            @click="updateImage1(trip.get_thumbnail)"
+            v-bind:src="trip.get_thumbnail"            
+          />
+          <img v-for="variant in variants"
+            :key="variant.variantId"
+            @click="updateImage(variant.variantImage)"
+           v-bind:src="variant.variantImage">
+        </div>
+          </div>
 
           <h2 class="title has-text-weight-bold">{{ trip.name }}</h2>
           <p>{{ trip.description }}</p>
@@ -74,12 +87,43 @@ export default {
   data() {
     return {
       trip: {},
+      variants:[
+        {
+          variantId:1,
+          variantImage:require("@/assets/fullwidth/pawan-sharma-m41i9RcGcAo-unsplash.jpg")
+          
+        },
+        {
+          variantId:2,
+          variantImage:require("@/assets/fullwidth/lunch.jpg")
+        },
+        {
+          variantId:3,
+          variantImage:require("@/assets/fullwidth/sandy-millar-YeJWDWeIZho-unsplash.jpg")
+        },
+        {
+          variantId:4,
+          variantImage:require("@/assets/fullwidth/windows-4nSKsoYyuPQ-unsplash.jpg")
+        },
+        {
+          variantId:5,
+          variantImage:require("@/assets/fullwidth/sutirta-budiman-Wdq1B_wZQUQ-unsplash.jpg")
+        }
+      ]
     };
   },
   mounted() {
     this.gettrip();
+    
   },
   methods: {
+    updateImage(variantImage){
+      this.trip.get_image = variantImage;
+      console.log("running");
+    },
+    updateImage1(get_image){
+      this.trip.get_image = get_image;
+    },
     async gettrip() {
       const category_slug = this.$route.params.category_slug;
       const trip_slug = this.$route.params.trip_slug;
@@ -95,6 +139,7 @@ export default {
         });
     },
   },
+  
 };
 </script>
 <style scoped>
@@ -134,6 +179,23 @@ h2.subtitle{
 .activities{
     border: #660746 solid 2px;
     margin: 10% 25%;
+
+}
+
+.product-small-img img {
+  height: 4.5em;
+  width: 4.5em;
+  padding: .5em;
+  margin: .2em;
+  cursor: pointer;
+  display: block;
+  opacity: 0.5;
+}
+.product-small-img img:hover {
+  opacity: 1;
+}
+.product-small-img {
+  display: inline-flex;
 
 }
 
