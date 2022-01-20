@@ -1,7 +1,6 @@
 <template>
   <section class="mb-2 p-0">
     <!--carousel-->
-    <div>
       <Carousel
         :navigation="false"
         :pagination="false"
@@ -10,6 +9,9 @@
         class="carousel"
         v-slot="{ currentSlide }"
       >
+      <!-- overlay -->
+    <div class="overlay"></div>
+
         <!--the captions-->
         <div class="has-text-left captions">
           <div class="background-captions">
@@ -31,8 +33,8 @@
             />
           </div>
         </Slide>
+    
       </Carousel>
-    </div>
   </section>
 </template>
 
@@ -65,17 +67,28 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
+.overlay{
+  background: linear-gradient(54deg, #660746 0%, #66074628 100%, #660746ee 100%);;
+  width: 100%;
+  height: 100%;
+  opacity: .6;
+  z-index: 1;
+  border-radius: 10px;
+}
 .carousel {
   position: relative;
   height: 20vh;
   display: flex;
+  
   // justify-content: center;
   .captions {
     position: absolute;
-    z-index: 1;
+    z-index: 2;
     width: 50%;
     bottom: 20%;
     left: 3%;
+
+
     p {
       color: rgb(255, 255, 255);
       font-weight: 900;
@@ -92,11 +105,13 @@ export default {
 
   .slide-info {
     position: absolute;
+
     top: 0;
     left: 0;
     width: 100%;
     max-height: 100%;
     height: 100%;
+    
     img {
       border-radius: 10px;
       min-width: 100%;
