@@ -1,13 +1,9 @@
 <template>
-<div class="">
+  <section class="section">
   <Asidebar />
   <Halfwidth />
-  <section class="section">
 
   </section>
-  
-  
-</div>
 </template>
 <script>
 import Asidebar from "@/components/Asidebar.vue";
@@ -21,10 +17,10 @@ export default {
   //  beforeCreate: function() {
   //     document.body.className = 'dashboard';
   // },
-  //     beforeCreate() {
-  //   this.$nextTick(() => {
+  //     beforeCreate(() => {
   //     document.querySelector('body').className = 'dashboard'
-  //   })
+  //   })) {
+  //   this.$nextTick(
   // },
   // beforeDestroy() {
   //   document.querySelector('body').className = ''
