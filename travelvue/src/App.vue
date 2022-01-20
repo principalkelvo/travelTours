@@ -20,9 +20,9 @@ export default {
   created() {},
   methods: {
       handleStyles () {
-        // Red style to the body tag for the home page
+        // dashboard style to the body tag for the dashboard page
         if (['/'].includes(this.$route.path)) document.body.className = 'dashboard'
-        // Pink style to the body tag for all other pages
+        // remove dashboard style to the body tag for all other pages
         else if (document.body.classList.contains('dashboard')) document.body.className = ''
       }
     },
