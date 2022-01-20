@@ -5,7 +5,7 @@
 
     <div class="columns is-multiline">
       <div class="column is-12">
-        <h2 class="is-size-2 has-text-weight-bold has-text-centered">
+        <h2 class="is-size-3 has-text-weight-bold has-text-centered">
           Featured Offers <b style="color:red">❤</b>
         </h2>
       </div>
@@ -19,7 +19,7 @@
 
     <div class="columns is-multiline">
       <div class="column is-12">
-        <h2 class="is-size-2 has-text-weight-bold has-text-centered">
+        <h2 class="is-size-3 has-text-weight-bold has-text-centered">
           Popular Destinations ⭐
         </h2>
       </div>

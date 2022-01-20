@@ -4,11 +4,12 @@
       <figure class="image mb-3">
         <img v-bind:src="trip.get_thumbnail" />
       </figure>
-      <h3 class="is-size-4">{{ trip.name }}</h3>
+      <h3 class="is-size-6 has-text-weight-medium">{{ trip.name }}</h3>
       <p class="is-size-6 has-text-grey">${{ trip.price }}</p>
+      <p class="is-size-6 has-text-grey">{{ trip.rate }} star</p>
       <router-link
         v-bind:to="trip.get_absolute_url"
-        class="button mt-4"
+        class="button mt-4 is-size-7"
         >View details</router-link
       >
       
@@ -43,7 +44,7 @@ export default {
   margin-right: -1.25rem;
   border-radius: 10%;
   transition: border-radius 1s;
-  height: 12em;
+  height: 8em;
   width:100%;
   max-width:100%;
 }
