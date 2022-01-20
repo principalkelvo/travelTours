@@ -13,7 +13,7 @@
       </div>
 
       <TripBox
-        v-for="trip in latestTrips"
+        v-for="trip in latestTrips.slice(0,4)"
         v-bind:key="trip.id"
         v-bind:trip="trip"
       />
@@ -27,7 +27,7 @@
       </div>
 
       <TripBox
-        v-for="trip in popularTrips"
+        v-for="trip in popularTrips.slice(0, 4)"
         v-bind:key="trip.id"
         v-bind:trip="trip"
       />
