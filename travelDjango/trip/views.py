@@ -4,8 +4,8 @@ from django.shortcuts import render
 from rest_framework.pagination import PageNumberPagination
 from rest_framework.views import APIView
 from rest_framework.response import Response
-from .models import Trip
-from .serializers import TripSerializer
+from .models import Trip, Category
+from .serializers import TripSerializer, CategorySerializer
 # Create your views here.
 
 class TripPagination(PageNumberPagination):
@@ -33,4 +33,17 @@ class TripDetail(APIView):
     def get(self,request, category_slug, trip_slug, format=None):
         trip= self.get_object(category_slug, trip_slug)
         serializer= TripSerializer(trip)
+        return Response(serializer.data)
+
+class CategoryDetail(APIView):
+    def get_object(self,category_slug):
+        #check if trip exists
+        try:
+            return Category.objects.get(slug=category_slug)
+        except Trip.DoesNotExist:
+            raise Http404
+    
+    def get(self,request, category_slug, format=None):
+        category= self.get_object(category_slug)
+        serializer= CategorySerializer(category)
         return Response(serializer.data)
