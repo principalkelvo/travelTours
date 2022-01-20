@@ -1,38 +1,44 @@
 <template>
-  <div class="trip section">
+  <section class="trip section">
     <div class="page-product">
       <div class="columns is-multiline is-centered">
         <div class="column is-7">
           <div class="has-text-centered">
-            <Slide>
-              <figure class="image mb-3 is-5by3">
-                <img v-bind:src="trip.get_image" />
-              </figure>
-            </Slide>
 
+            <!-- image to view  -->
+              <figure class="image mb-3 is-5by3">
+                <img id="slideout" v-bind:src="trip.get_image"/>
+              </figure>            
+
+              <!-- images to hover on (thumbnails) -->
               <div class="image product-small-img">
                 <img
-                  @click="updateImage1(trip.get_thumbnail)"
+                  @mouseover="updateImage1(trip.get_thumbnail)"
                   v-bind:src="trip.get_thumbnail"
                 />
                 <img
                   v-for="variant in variants"
                   :key="variant.variantId"
-                  @click="updateImage(variant.variantImage)"
+                  @mouseover="updateImage(variant.variantImage)"
                   v-bind:src="variant.variantImage"
                 />
               </div>
+
           </div>
 
           <h2 class="title has-text-weight-bold">{{ trip.name }}</h2>
           <p>{{ trip.description }}</p>
         </div>
+
+        <!-- booknow button  -->
         <div class="column is-5 has-text-centered">
           <div class="field">
             <div class="control">
               <button class="button">Book Now</button>
             </div>
           </div>
+
+          <!-- activities field  -->
           <div class="field activities p-2">
             <h2 class="subtitle has-text-weight-medium">Activities</h2>
             <ul class="is-capitalized">
@@ -43,6 +49,7 @@
           </div>
         </div>
 
+        <!-- details for place  -->
         <div class="columns is-multiline m-4">
           <div class="column is-4 has-text-centered">
             <h2 class="has-text-weight-bold m-3">Description</h2>
@@ -87,7 +94,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <script>
@@ -101,6 +108,7 @@ export default {
   data() {
     return {
       trip: {},
+      //images thumbnail
       variants: [
         {
           variantId: 1,
@@ -134,10 +142,20 @@ export default {
   methods: {
     updateImage(variantImage) {
       this.trip.get_image = variantImage;
-      console.log("running");
+      var slider= document.getElementById("slideout");
+      slider.className +=" slideout";
+      setTimeout(function(){
+        slider.classList.remove("slideout")
+      },500);
     },
     updateImage1(get_image) {
       this.trip.get_image = get_image;
+      var slider= document.getElementById("slideout");
+      slider.className +=" slideout";
+      setTimeout(function(){
+        slider.classList.remove("slideout")
+      },500);
+
     },
     async gettrip() {
       const category_slug = this.$route.params.category_slug;
@@ -161,11 +179,20 @@ export default {
   height: 35%;
 } */
 
+/* list style before activities */
+li::before{
+  content: '';
+  width: 10px;
+  height: 10px;
+  border-radius: 50% ;
+  display: inline-flex;
+  margin-right: 10px;
+  border: #660746 2px solid;
+  background: white;
+}
+
 .image img {
   border-radius: 10px;
-}
-table {
-  background: none;
 }
 
 a {
@@ -205,7 +232,7 @@ h2.subtitle {
   margin: 0.2em;
   cursor: pointer;
   display: block;
-  opacity: 0.5;
+  opacity: 0.6;
 }
 .product-small-img img:hover {
   opacity: 1;
@@ -218,7 +245,8 @@ h2.subtitle {
     border-left: none;
   }
   .activities {
-    margin: 0;
+    margin-top: 5%;
+    margin-bottom: 0;
   }
   .product-small-img {
     width: 100%;
@@ -228,4 +256,19 @@ h2.subtitle {
     max-height: 100%;
   }
 }
+
+/* slide fade out */
+.slideout{
+  /* animation: 1s ease-in 0s 1 slideInFromLeft; */
+  animation: fade 1s ease-in-out;
+}
+@keyframes fade {
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
+}
+
 </style>
