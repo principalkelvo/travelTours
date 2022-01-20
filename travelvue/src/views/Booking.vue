@@ -20,7 +20,7 @@
     <div class="columns is-multiline">
       <div class="column is-12">
         <h2 class="is-size-2 has-text-weight-bold has-text-centered">
-          Popular Destinations 😋
+          Popular Destinations ⭐
         </h2>
       </div>
 
