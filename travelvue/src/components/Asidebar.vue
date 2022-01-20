@@ -1,12 +1,16 @@
 <template>
   <aside class="aside is-placed-left is-expanded">
-    <span slot="label"> <b>Admin</b> Kelvin </span>
+  <AsideContent/>
   </aside>
 </template>
 
 <script>
+import AsideContent from '../components/AsideContent.vue'
 export default {
   name: "Asidebar",
+  components:{
+    AsideContent,
+  }
 };
 </script>
 
