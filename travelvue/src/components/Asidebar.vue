@@ -17,18 +17,23 @@ aside.is-placed-left {
   display: block;
 }
 aside.aside {
+  background-color: #660746;
+
   width: 0rem;
-  transition: width 2s;
-  display: block;
   opacity: 0;
+
+  transition: width 1s ease, opacity 1s ease;
+
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 40;
-  height: 100vh;
-  padding: 0;
+  z-index: 1;
+  padding: 0.5em;
   box-shadow: 1px 0 #c9abad;
-  background: #660746;
+  bottom: 0;
+
+  display: flex;
+  flex-direction: column;
 }
 @media (min-width: 1024px) {
  aside.aside {
