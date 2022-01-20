@@ -9,7 +9,7 @@
       </div>
 
       <!-- Category field  -->
-      <div class="field category p-2 ">
+      <div class="field category p-2 mt-3">
         <router-link to="/family" class="aside-item">Family</router-link>
         <router-link to="/wedding" class="aside-item">Wedding</router-link>
         <router-link to="/dinner" class="aside-item is-capitalized">dinner</router-link>
