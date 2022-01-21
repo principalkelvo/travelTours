@@ -29,6 +29,8 @@ export default {
 .box {
   background-color: transparent;
   box-shadow: none;
+  padding: 1.25em 0;
+  transition: box-shadow .3s ease-in;
 }
 .box:hover {
   // box-shadow: 0 0.5em 1em -0.125em rgb(10 10 10 / 10%), 0 0px 0 1px rgb(10 10 10 / 2%);
@@ -44,8 +46,12 @@ export default {
   margin-right: -1.25rem;
   border-radius: 10%;
   transition: border-radius 1s;
-  height: 8em;
+  height: 10em;
+  max-height: 100%;
   width:100%;
   max-width:100%;
 }
+
+
+
 </style>
