@@ -133,14 +133,20 @@ export default {
   // },
 };
 </script>
-<style>
+<style lang=scss>
 /* dashboard slide in animation */
 .dashboard {
   background-color: #f9e2e3;
   padding-left: 14rem;
   transition: padding-left 1s;
   animation: 1s ease-out 0s 1 slideInFromLeft;
+  
 }
+div.clearNav{
+  display: none;
+}
+
+
 
 /* show dashboard  */
 @media (max-width: 1023px) {
