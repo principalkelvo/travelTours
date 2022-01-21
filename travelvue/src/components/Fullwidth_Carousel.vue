@@ -67,7 +67,7 @@ export default {
 <style lang="scss" scoped>
 .carousel {
   position: relative;
-  height: 100vh;
+  height: 90vh;
   display: flex;
   // justify-content: center;
   .captions {
