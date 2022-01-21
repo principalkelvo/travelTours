@@ -1,9 +1,11 @@
 <template>
-  <nav class="navbar">
-    <div class="navbar-brand">
+  <nav class="navbar p-4">
+    <div class="navbar-brand" >
+      <div id="navbar-item" class="mt-3">
       <router-link to="/" class="navbar-item">
-        <strong>LOGO</strong>
+        <img src="../assets/logo.png" alt="">
       </router-link>
+      </div>
       <a
         class="navbar-burger"
         aria-label="menu"
@@ -22,6 +24,28 @@
       id="navbar-menu"
       v-bind:class="{ 'is-active': showMobileMenu }"
     >
+
+    <!--search button-->
+      <div class="navbar-start">
+        <div class="navbar-item">
+          <form method="get" action="/search">
+          <div class="field has-addons">
+            <div class="control">
+              <input type="text" class="input" placeholder="What are you looking for?" name="query"> 
+            </div>
+            <div class="control">
+              <button class="button">
+                <span class="icon">
+                  <i class="fas fa-search"></i>
+                </span>
+              </button>
+            </div>
+          </div>
+          </form>
+        </div>
+      </div>
+
+
       <div class="navbar-end">
         <router-link to="/home" class="navbar-item">HOME</router-link>
         <router-link to="/about" class="navbar-item">ABOUT US</router-link>
@@ -52,13 +76,25 @@ export default {
       showMobileMenu: false,
     };
   },
+  methods: {
+      
+    }
 };
 </script>
-<style scoped>
+<style>
+.clearNav{
+  display: none;
+}
+</style>
+<style lang="scss" scoped>
 nav.navbar {
-  box-shadow: 0 1px #660746;
-  background-color: #f9e2e3;
-  color: black;
+  /* box-shadow: 0 1px #660746; */
+  background-color: #660746;
+  color: white;
+}
+.navbar-item{
+  color: white;
+
 }
 a.navbar-item:focus,
 a.navbar-item:focus-within,
@@ -68,14 +104,14 @@ a.navbar-item.is-active,
 .navbar-link:focus-within,
 .navbar-link:hover,
 .navbar-link.is-active {
-  border-bottom: 5px solid #660746;
-  color: #660746;
-  background-color: #f9e2e3;
+  border-bottom: 5px solid #f9e2e3;
+  color: #f9e2e3;
+  background-color: #660746;
   animation: shake 0.5s;
 }
 @media screen and (max-width: 1023px) {
   .navbar-menu {
-    background-color: #f9e2e3;
+    background-color: #660746;
   }
   a.navbar-item:focus,
   a.navbar-item:focus-within,
