@@ -7,6 +7,7 @@ import Home from '../views/Home.vue'
 import Booking from '../views/Booking.vue'
 import Contact from '../views/Contact.vue'
 import Trip from '../views/Trip.vue'
+import Category from '../views/Category.vue'
 
 const routes = [
   {
@@ -52,6 +53,11 @@ const routes = [
     path: '/:category_slug/:trip_slug',
     name: 'Trip',
     component: Trip
+  },
+  {
+    path: '/:category_slug',
+    name: 'Category',
+    component: Category
   }
 ]
 
