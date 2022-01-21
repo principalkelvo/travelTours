@@ -4,7 +4,7 @@
   <Asidebar />
   <!-- carousel -->
   <Halfwidth />
-
+  <!-- featured offers,latest trips  -->
   <div class="columns is-multiline hero-body">
       <div class="column is-12">
         <h2 class="is-size-3 has-text-weight-bold has-text-left">
@@ -19,7 +19,8 @@
       />
     </div>
 
-    <div class="columns is-multiline">
+    <!-- popular places  -->
+    <div class="columns is-multiline hero-body">
       <div class="column is-12">
         <h2 class="is-size-3 has-text-weight-bold has-text-left">
           Popular Destinations ⭐
@@ -27,11 +28,27 @@
       </div>
 
       <TripBox
-        v-for="trip in popularTrips.slice(0, 4)"
+        v-for="trip in popularTrips.slice(0,4)"
         v-bind:key="trip.id"
         v-bind:trip="trip"
       />
     </div>
+
+    <div class="columns is-multiline hero-body">
+      <div class="column is-12">
+        <h2 class="is-size-3 has-text-weight-bold has-text-left">
+          Family ⭐
+        </h2>
+      </div>
+
+      <TripBox
+        v-for="trip in category.trips.slice(0,4)"
+        v-bind:key="trip.id"
+        v-bind:trip="trip"
+      />
+    </div>
+
+
   </section>
 </template>
 <script>
@@ -48,6 +65,9 @@ export default {
     return {
       latestTrips: [],
       popularTrips: [],
+      category:{
+                trips:[]
+            }
     };
   },
   components: {
@@ -57,8 +77,9 @@ export default {
   },
   
   mounted() {
-    this.getLatestTrips() 
+    this.getLatestTrips();
     this.getPopularTrips();
+    this.getFamilyCategory();
   },
   methods: {
     getLatestTrips() {
@@ -76,12 +97,28 @@ export default {
         .get("/api/v1/popular-trips/")
         .then((response) => {
           this.popularTrips = response.data;
-          console.log(this.popularTrips)
         })
         .catch((error) => {
           console.log(error);
         });
     },
+
+    async getFamilyCategory(){
+            // const categorySlug= this.$route.params.category_slug
+            
+            // family category if you want to add another 
+            // bouque change family to category slug
+            const categorySlug= "family"
+            await axios
+                .get(`/api/v1/trips/${categorySlug}/`)
+                .then(response=>{
+                    this.category= response.data
+                })
+                .catch(error=>{
+                    console.log(error)
+                })
+                
+        }
   },
   //  beforeCreate: function() {
   //     document.body.className = 'dashboard';
@@ -97,6 +134,7 @@ export default {
 };
 </script>
 <style>
+/* dashboard slide in animation */
 .dashboard {
   background-color: #f9e2e3;
   padding-left: 14rem;
@@ -104,6 +142,7 @@ export default {
   animation: 1s ease-out 0s 1 slideInFromLeft;
 }
 
+/* show dashboard  */
 @media (max-width: 1023px) {
   .dashboard {
     padding-left: 0;
