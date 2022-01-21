@@ -1,9 +1,11 @@
 <template>
-  <section class="section">
-    <div class="columns is-multiline">
-      <div class="title column is-12">
-        <h2 class="has-text-centered has-text-weight-bold">LOGO</h2>
+
+  <section class="hero-body">
+    <div class="image logo">
+        <img src="../assets/logo.png" alt="">
       </div>
+    <div class="columns is-multiline">
+      
       <div class="column is-12 categoryTitle">
         <h2 class="subtitle has-text-left m-1">Categories</h2>
       </div>
@@ -106,11 +108,12 @@ footer{
 
   }
 }
+/* category tite its absolute */
 .categoryTitle{
     position: absolute;
     width: 70%;
     height: 2em;
-    top: 6.4em;
+    top: 9.9em;
     margin: 0 1.5em;
     left: 0;
     padding: 2px 8px; 
@@ -118,6 +121,24 @@ footer{
   background-color: #f9e2e3de ;
 
 }
+.logo{
+  width:8em;
+  height: 8em;
+  border: 2px white;
+  color: #f9e2e3;
+  border-radius: 50%;
 
+  
+}
+.logo img{
+  max-width: 100%;
+  max-height: 100%;
+  border: 2px white;
+  padding: 2em;
+
+}
+.logo:hover{
+  box-shadow: 0 0 0 0.125em rgb(102 7 70 / 25%);
+}
 
 </style>
