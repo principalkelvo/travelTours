@@ -24,11 +24,17 @@ export default {
         if (['/'].includes(this.$route.path)) document.body.className = 'dashboard'
         // remove dashboard style to the body tag for all other pages
         else if (document.body.classList.contains('dashboard')) document.body.className = ''
-      }
+
+        // dashboard style to the body tag for the dashboard page
+        var remover= document.getElementById("navbar-item");
+        if (['/'].includes(this.$route.path)) remover.className = 'clearNav'
+        // remove dashboard style to the body tag for all other pages
+        else if (remover.classList.contains('clearNav')) remover.className = ''
+      },
     },
     // Handle styles when the app is initially loaded
     mounted () {
-      this.handleStyles()
+      this.handleStyles();
     },
     // Handle styles when the route changes
     watch: {
