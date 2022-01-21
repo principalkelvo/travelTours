@@ -3,7 +3,7 @@
     <!--header corousel-->
     <Fullwidth />
 
-    <div class="columns is-multiline">
+    <div class="columns is-multiline hero-body">
       <div class="column is-12">
         <h2 class="is-size-3 has-text-weight-bold has-text-centered">
           Featured Offers <b style="color:red">❤</b>
@@ -17,7 +17,7 @@
       />
     </div>
 
-    <div class="columns is-multiline">
+    <div class="columns is-multiline hero-body">
       <div class="column is-12">
         <h2 class="is-size-3 has-text-weight-bold has-text-centered">
           Popular Destinations ⭐
