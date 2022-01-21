@@ -12,7 +12,7 @@ class TripPagination(PageNumberPagination):
     page_size= 4
 class LatestTripList(APIView): #viewset to get latest trips to show in frontend
     def get(self,request, format= None):
-        trips = Trip.objects.all()[0:8] #this shows number of items to be shown in latest trips
+        trips = Trip.objects.order_by('-date_added')[0:8] #this shows number of items to be shown in latest trips
         serializer =TripSerializer(trips, many=True)
         return Response(serializer.data)
 
