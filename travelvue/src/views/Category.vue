@@ -32,7 +32,9 @@ export default {
         TripBox,
     },
     mounted(){
+        document.title=this.category.name +' | Trip'
         this.getCategory()
+
     },
     //when we switch betweeb two dynamic routes the life cycle hooks will not be caled thats why we use WATCH
     watch:{
@@ -50,7 +52,6 @@ export default {
                 .get(`/api/v1/trips/${categorySlug}/`)
                 .then(response=>{
                     this.category= response.data
-                    document.title=this.category.name+' | Djackets'
                 })
                 .catch(error=>{
                     console.log(error)

@@ -70,7 +70,7 @@ export default {
         .get("/api/v1/popular-trips/")
         .then((response) => {
           this.popularTrips = response.data;
-          console.log(popularTrips)
+          console.log(this.popularTrips)
         })
         .catch((error) => {
           console.log(error);
