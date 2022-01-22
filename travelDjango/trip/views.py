@@ -47,12 +47,13 @@ class CategoryDetail(APIView):
         serializer= CategorySerializer(category)
         return Response(serializer.data)
 
+#add search functionality
 @api_view (['POST'])
 def search(request):
     query= request.data.get('query', '')
 
     if query:
-        trips= Trip.objects.filter(Q(name__icontains=query) | Q(description__icontains= query)) | Q(price__icontains= query)
+        trips= Trip.objects.filter(Q(name__icontains=query) | Q(description__icontains= query))
         serializer= TripSerializer(trips, many= True)
         return Response(serializer.data)
     
