@@ -17,11 +17,12 @@
 
 <script>
 import axios from 'axios'
-import tripBox from '@/components/tripBox.vue'
+import TripBox from "@/components/trip/TripBox";
+
 export default {
     name:'Search',
     components:{
-        tripBox
+        TripBox
     },
     data(){
         return{
@@ -40,7 +41,6 @@ export default {
     },
     methods:{
         async performSearch(){
-            this.$store.commit('setIsLoading',true)
 
             await axios
                 .post('/api/v1/trips/search',{'query':this.query})
@@ -51,7 +51,6 @@ export default {
                     console.log(error)
                 })
 
-            this.$store.commit('setIsLoading',false)
         }
     }
 
