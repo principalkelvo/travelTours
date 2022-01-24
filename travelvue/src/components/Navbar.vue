@@ -3,7 +3,7 @@
     <div class="navbar-brand" >
       <div id="navbar-item" class="mt-3">
       <router-link to="/" class="navbar-item">
-        <img src="../assets/logo.png" alt="">
+        <img src="../assets/Pokot-tours-and-travel-logo.png" alt="">
       </router-link>
       </div>
       <a
