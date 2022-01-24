@@ -1,8 +1,8 @@
 <template>
 
   <section class="hero-body">
-    <div class="image logo">
-        <img src="../assets/logo.png" alt="">
+    <div class="image logo mb-4">
+        <img src="../assets/Pokot-tours-and-travel-logo.png" alt="">
       </div>
     <div class="columns is-multiline">
       
@@ -73,8 +73,6 @@ h2.subtitle {
   font-weight: normal;
   transform: scale(0.9, 1.5);
 
-  
-
 }
 .category{
     display: grid;
@@ -113,7 +111,7 @@ footer{
     position: absolute;
     width: 70%;
     height: 2em;
-    top: 9.9em;
+    top: 10.5em;
     margin: 0 1.5em;
     left: 0;
     padding: 2px 8px; 
@@ -137,8 +135,8 @@ footer{
   padding: 2em;
 
 }
-.logo:hover{
+/* .logo:hover{
   box-shadow: 0 0 0 0.125em rgb(102 7 70 / 25%);
-}
+} */
 
 </style>
