@@ -5,11 +5,16 @@
         <img v-bind:src="trip.get_thumbnail" />
       </figure>
       <h3 class="is-size-6 has-text-weight-medium">{{ trip.name }}</h3>
-      <p class="is-size-6 has-text-grey">${{ trip.price }}</p>
-      <p class="is-size-6 has-text-grey">{{ trip.rate }} star</p>
+      <p class="is-size-6 has-text-grey">Ksh {{ trip.price }}</p>
+      <div v-if="trip.rate===0" class="is-size-5 star"><img src="../../assets/stars/0_star.png" alt=""></div>
+      <div v-if="trip.rate===1" class="is-size-5 star"><img src="../../assets/stars/1_star.png" alt=""></div>
+      <div v-if="trip.rate===2" class="is-size-5 star"><img src="../../assets/stars/2_star.png" alt=""></div>
+      <div v-if="trip.rate===3" class="is-size-5 star"><img src="../../assets/stars/3_star.png" alt=""></div>
+      <div v-if="trip.rate===4" class="is-size-5 star"><img src="../../assets/stars/4_star.png" alt=""></div>
+      <div v-if="trip.rate===5" class="is-size-5 star"><img src="../../assets/stars/5_star.png" alt=""></div>
       <router-link
         v-bind:to="trip.get_absolute_url"
-        class="button mt-4 is-size-7"
+        class="button mt-2 is-size-7"
         >View details</router-link
       >
       
@@ -29,7 +34,7 @@ export default {
 .box {
   background-color: transparent;
   box-shadow: none;
-  padding: 1.25em 0;
+  padding: 1.25em 1.25em;
   transition: box-shadow .3s ease-in;
 }
 .box:hover {
@@ -46,12 +51,19 @@ export default {
   margin-right: -1.25rem;
   border-radius: 10%;
   transition: border-radius 1s;
-  height: 10em;
+  height: 12em;
   max-height: 100%;
   width:100%;
   max-width:100%;
 }
 
-
+div.star{
+  width: 5em;
+  img{
+    max-width: 100%;
+    max-height: 100%;
+    vertical-align: middle;
+  }
+}
 
 </style>
