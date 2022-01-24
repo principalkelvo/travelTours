@@ -2,7 +2,7 @@
 
   <section class="hero-body">
     <div class="image logo mb-4">
-        <img src="../assets/Pokot-tours-and-travel-logo.png" alt="">
+        <img src="../assets/logo.png" alt="">
       </div>
     <div class="columns is-multiline">
       
@@ -49,6 +49,36 @@ export default {
 };
 </script>
 <style scoped>
+.logo{
+  width:8em;
+  height: 8em;
+  border: 2px white;
+  color: #f9e2e3;
+  border-radius: 50%;
+
+  
+}
+.logo img{
+  max-width: 100%;
+  max-height: 100%;
+  border: 2px white;
+  padding: 2em;
+
+}
+/* category tite its absolute */
+
+.categoryTitle{
+    position: absolute;
+    width: 70%;
+    height: 2em;
+    top: 10.5em;
+    margin: 0 1.5em;
+    left: 0;
+    padding: 2px 8px; 
+  border-radius: 10px;
+  background-color: #f9e2e3de ;
+
+}
 .subtitle{
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: 1em;
@@ -89,11 +119,11 @@ h2.subtitle {
     /* transform: scale(0.83, 1.33); */
 }
 footer{
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 1em;
     position: absolute;
     bottom: 10%;
     
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: 1em;
 }
 .aside-item img{
     height: 1.5em;
@@ -106,35 +136,8 @@ footer{
 
   }
 }
-/* category tite its absolute */
-.categoryTitle{
-    position: absolute;
-    width: 70%;
-    height: 2em;
-    top: 10.5em;
-    margin: 0 1.5em;
-    left: 0;
-    padding: 2px 8px; 
-  border-radius: 10px;
-  background-color: #f9e2e3de ;
 
-}
-.logo{
-  width:8em;
-  height: 8em;
-  border: 2px white;
-  color: #f9e2e3;
-  border-radius: 50%;
 
-  
-}
-.logo img{
-  max-width: 100%;
-  max-height: 100%;
-  border: 2px white;
-  padding: 2em;
-
-}
 /* .logo:hover{
   box-shadow: 0 0 0 0.125em rgb(102 7 70 / 25%);
 } */
