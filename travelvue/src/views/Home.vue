@@ -81,21 +81,47 @@
         <div class="columns is-multiline packages">
           <div class="column is-4 is-dark">
             <figure class="image is-5by4 m-2">
-              <img src="../assets/footer_img.jpg" alt="" />
+              <img src="../assets/fullwidth/anthony-delanoix-vmrCxMRdq58-unsplash.jpg" alt="" />
             </figure>
             <figure class="image is-5by4 m-2">
-              <img src="../assets/footer_img.jpg" alt="" />
+              <img src="../assets/fullheight/rayyu-maldives-lUevqgm9rec-unsplash.jpg" alt="" />
             </figure>
           </div>
           <div class="column is-4 tour_form box">
-            <div></div>
+            <div class="content p-4 mt-4">
+              <h2 class="subtitle has-text-centered has-text-white ">Pokot Tour</h2>
+              <div class="activities content">
+                <h2 class="has-text-weight-medium has-text-white">
+                  Activities
+                </h2>
+                <ul>
+                  <li><i class="fas fa-hiking pr-4"></i>Hiking</li>
+                  <li><i class="fas fa-ship pr-2"></i> Boat-riding</li>
+                  <li><i class="fas fa-swimmer pr-2"></i> Swimming</li>
+                </ul>
+              </div>
+              <div class="packages content">
+                <h2 class="has-text-weight-medium has-text-white">
+                  Our Packages
+                </h2>
+                <ul>
+                  <li>Domestic tour package</li>
+                  <li>Weekend getaway package</li>
+                  <li>Workstation package</li>
+                  <li>HoneyMoon package</li>
+                </ul>
+              </div>
+            </div>
+            <div class="has-text-centered">
+              <button class="button m-6 ">See all Packages</button>
+              </div>
           </div>
           <div class="column is-4">
             <figure class="image is-5by4 m-2">
-              <img src="../assets/footer_img.jpg" alt="" />
+              <img src="../assets/fullwidth/bird-4644652_1920.jpg" alt="" />
             </figure>
             <figure class="image is-5by4 m-2">
-              <img src="../assets/footer_img.jpg" alt="" />
+              <img src="../assets/fullheight/ibrahim-asad-p01NQYt5Xak-unsplash.jpg" alt="" />
             </figure>
           </div>
         </div>
@@ -274,7 +300,7 @@
             </div>
           </div>
         </div>
-        <div class="columns is-multiline is-centered">
+        <div class="columns is-multiline is-centered content">
           <div class="column is-5">
             <h2 class="is-size-4 has-text-weight-semibold">
               We since from 2011
@@ -405,23 +431,12 @@ export default {
   components: {
     Fullwidth,
   },
-  setup() {
-    const carouselSlides = [
-      "bg- 1",
-      "bg- 2",
-      "bg- 3",
-      "bg- 4",
-      "bg- 5",
-      "bg- 6",
-      "bg- 7",
-    ];
-    return { carouselSlides };
-  },
   mounted() {},
   methods: {},
 };
 </script>
 <style lang="scss" scoped>
+
 //top destination
 .top_shortcuts {
   display: flex;
@@ -480,13 +495,27 @@ export default {
   position: absolute;
 }
 
-.tour_form {
+//tour packages
+.packages{
+  justify-content: center;
+  align-items: center;
+  padding: 4%;
+  .tour_form {
   background: #660746;
   border-radius: 6px;
-  box-shadow: 0 0.5em 1em -0.125em rgb(10 10 10 / 10%),
-    0 0px 0 1px rgb(10 10 10 / 2%);
+  transition: box-shadow .2s ease-in;
   color: #f9e2e3;
+  height: 100%;
 }
+img{
+    border-radius: 10px;
+  }
+}
+.tour_form:hover{
+  box-shadow: 0 0.5em 1em -0.125em rgb(10 10 10 / 100%),
+      0 0px 0 1px rgb(10 10 10 / 100%);
+}
+
 
 //travel tips
 .travel_tips_bg {
@@ -497,7 +526,7 @@ export default {
   border-radius: 10px;
   box-shadow: 0 0.5em 1em -0.125em rgb(10 10 10 / 10%),
     0 0px 0 1px rgb(10 10 10 / 2%);
-  height: 90vh;
+  height: 100%;
   h2.subtitle {
     color: #f9e2e3;
     font-size: 1.4em;
