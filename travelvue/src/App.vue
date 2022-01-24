@@ -54,7 +54,7 @@ export default {
   // Handle styles when the app is initially loaded
   mounted() {
     this.handleStyles();
-    onResize(e);
+    this.onResize();
 
   },
   // Handle styles when the route changes
