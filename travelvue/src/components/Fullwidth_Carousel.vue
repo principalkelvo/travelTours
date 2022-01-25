@@ -106,6 +106,11 @@ export default {
   }
 }
 @media (max-width: 768px) {
+  .mb-6{
+      margin-bottom: 1em !important;
+    }
+  section{
+    padding: 0;
   .carousel { 
   height: 60vh;
 
@@ -120,6 +125,7 @@ export default {
     p{
       font-weight:600;
     }
+  }
   }
   }
   
