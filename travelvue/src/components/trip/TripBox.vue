@@ -4,8 +4,8 @@
       <figure class="image mb-3">
         <img v-bind:src="trip.get_thumbnail" />
       </figure>
-      <h3 class="is-size-6 has-text-weight-medium">{{ trip.name }}</h3>
-      <p class="is-size-6 has-text-grey">Ksh {{ trip.price }}</p>
+      <h3 class="is-size-6 has-text-weight-medium is-capitalized">{{ trip.name }}</h3>
+      <p class="is-size-6 has-text-grey">KSh {{ trip.price }}</p>
       <div v-if="trip.rate===0" class="is-size-5 star"><img src="../../assets/stars/0_star.png" alt=""></div>
       <div v-if="trip.rate===1" class="is-size-5 star"><img src="../../assets/stars/1_star.png" alt=""></div>
       <div v-if="trip.rate===2" class="is-size-5 star"><img src="../../assets/stars/2_star.png" alt=""></div>
