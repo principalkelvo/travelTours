@@ -9,12 +9,13 @@
           Featured Offers <b style="color:red">❤</b>
         </h2>
       </div>
-
+      <div class="trip-flex column is-12">
       <TripBox
         v-for="trip in latestTrips"
         v-bind:key="trip.id"
         v-bind:trip="trip"
       />
+      </div>
     </div>
 
     <div class="columns is-multiline hero-body">
@@ -23,12 +24,14 @@
           Popular Destinations ⭐
         </h2>
       </div>
+      <div class="trip-flex column is-12">
 
       <TripBox
         v-for="trip in popularTrips"
         v-bind:key="trip.id"
         v-bind:trip="trip"
       />
+      </div>
     </div>
   </div>
 </template>
@@ -82,5 +85,28 @@ export default {
 <style scoped>
 h2 {
   color: black;
+}
+
+.trip-flex{
+    display: flex;
+        flex-wrap: wrap;
+        
+    flex-grow: 1;
+    flex-shrink: 0;
+}
+@media (max-width: 768px) {
+
+.trip-flex{
+    display: inline-flex;
+    overflow: auto;
+    flex-direction: row;
+    height: auto;
+    width: 100%;
+    flex-wrap: unset;
+    padding: 0;
+}
+.column{
+  padding: 0.75rem 0;
+}
 }
 </style>
