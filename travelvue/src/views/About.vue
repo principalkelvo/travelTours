@@ -158,7 +158,7 @@
         </div>
         
         <div class="columns is-multiline">
-          <div class="column is-12 review is-fullwidth">
+          <div class="column is-12 review is-fullwidth ">
             <div class=" profile has-text-centered">
             </div>
 
@@ -213,7 +213,6 @@ export default {
 .review{
   border:#660746 solid;
   color: #ff0000;
-  height: 20vh;
 }
 .profile{
   width:7em;
@@ -230,5 +229,10 @@ export default {
 }
 .profile:hover{
   box-shadow: 0 0 0 0.125em rgb(102 7 70 / 25%);
+}
+@media (max-width: 768px) {
+  .profile{
+  width:4em;
+  height: 4em;}
 }
 </style>
