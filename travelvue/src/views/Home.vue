@@ -113,7 +113,7 @@
               </div>
             </div>
             <div class="has-text-centered">
-              <button class="button m-6 ">See all Packages</button>
+              <button class="button ">See all Packages</button>
               </div>
           </div>
           <div class="column is-4">
@@ -466,6 +466,10 @@ img{
 .hr {
   background-color: #660746;
 }
-
+@media (max-width: 768px) {
+  .top_shortcuts{
+    display: block;
+  }
+}
 
 </style>
