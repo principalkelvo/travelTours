@@ -105,4 +105,14 @@ export default {
     }
   }
 }
+@media (max-width: 768px) {
+  .carousel { 
+  height: 60vh;
+
+  .captions p{
+      font-weight:600;
+    }
+  }
+  
+}
 </style>
