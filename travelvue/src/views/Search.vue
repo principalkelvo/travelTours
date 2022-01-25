@@ -43,7 +43,7 @@ export default {
         async performSearch(){
 
             await axios
-                .post('/api/v1/trips/search',{'query':this.query})
+                .post('/api/v1/trips/search/',{'query':this.query})
                 .then(response=>{
                     this.trips= response.data
                 })
