@@ -109,9 +109,18 @@ export default {
   .carousel { 
   height: 60vh;
 
-  .captions p{
+  .captions{ 
+    .title{
+      font-size: 1.5rem;
+    }
+    .subtitle{
+      font-size: 1rem;
+    }
+    
+    p{
       font-weight:600;
     }
+  }
   }
   
 }

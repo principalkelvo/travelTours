@@ -82,11 +82,14 @@ export default {
     }
 };
 </script>
+
 <style>
 .clearNav{
   display: none;
 }
 </style>
+
+
 <style lang="scss" scoped>
 nav.navbar {
   /* box-shadow: 0 1px #660746; */
@@ -124,5 +127,10 @@ a.navbar-item.is-active,
   .navbar-link.is-active {
     animation: none;
   }
+}
+@media (max-width: 768px) {
+.p-4{
+  padding: 2px !important;
+}
 }
 </style>

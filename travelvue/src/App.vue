@@ -149,4 +149,11 @@ h1::before {
     transform: translate(1px, -2px) rotate(-1deg);
   }
 }
+@media (max-width: 768px) {
+  h1::before {
+  content: "";
+  text-decoration: line-through;
+  margin: auto 0.5em;
+}  
+}
 </style>
