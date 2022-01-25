@@ -76,7 +76,6 @@ html {
 }
 section {
   background: #f9e2e3;
-  padding: 22px;
 }
 img {
   object-fit: cover;
@@ -155,5 +154,17 @@ h1::before {
   text-decoration: line-through;
   margin: auto 0.5em;
 }  
+.section {
+    padding: 1rem;
+}
+h1.is-size-2{
+  font-size: 1.5rem !important;
+}
+h2.is-size-5{
+  font-size: .8rem !important;
+}
+.line{
+  text-align: center;
+}
 }
 </style>
