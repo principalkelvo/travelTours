@@ -6,6 +6,25 @@
         <img src="../assets/logo.png" alt="">
       </router-link>
       </div>
+      <!--search button-->
+      <div class="navbar-start">
+        <div class="navbar-item">
+          <form method="get" action="/search">
+          <div class="field has-addons">
+            <div class="control">
+              <input type="text" class="input" placeholder="What are you looking for?" name="query"> 
+            </div>
+            <div class="control">
+              <button class="button">
+                <span class="icon">
+                  <i class="fas fa-search"></i>
+                </span>
+              </button>
+            </div>
+          </div>
+          </form>
+        </div>
+      </div>
       <a
         class="navbar-burger has-text-white"
         aria-label="menu"
@@ -25,25 +44,7 @@
       v-bind:class="{ 'is-active': showMobileMenu }"
     >
 
-    <!--search button-->
-      <div class="navbar-start">
-        <div class="navbar-item">
-          <form method="get" action="/search">
-          <div class="field has-addons">
-            <div class="control">
-              <input type="text" class="input" placeholder="What are you looking for?" name="query"> 
-            </div>
-            <div class="control">
-              <button class="button">
-                <span class="icon">
-                  <i class="fas fa-search"></i>
-                </span>
-              </button>
-            </div>
-          </div>
-          </form>
-        </div>
-      </div>
+    
 
 
       <div class="navbar-end">
