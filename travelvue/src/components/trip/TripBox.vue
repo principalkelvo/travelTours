@@ -1,5 +1,5 @@
 <template>
-  <div class="column is-3">
+  <div class="column is-3 ">
     <div class="box">
       <figure class="image mb-3">
         <img v-bind:src="trip.get_thumbnail" />
@@ -35,7 +35,8 @@ export default {
   background-color: transparent;
   box-shadow: none;
   padding: 1.25em 1.25em;
-  transition: box-shadow .3s ease-in;
+  transition: box-shadow .2s ease-in;
+  min-width: 10em;
 }
 .box:hover {
   // box-shadow: 0 0.5em 1em -0.125em rgb(10 10 10 / 10%), 0 0px 0 1px rgb(10 10 10 / 2%);
@@ -63,6 +64,17 @@ div.star{
     max-width: 100%;
     max-height: 100%;
     vertical-align: middle;
+  }
+}
+@media (max-width: 768px) {
+  .box{
+    width:12em;
+  }
+  .is-size-6{
+    font-size: .7rem !important;
+  }
+  .is-size-5{
+    font-size: .9rem !important;
   }
 }
 

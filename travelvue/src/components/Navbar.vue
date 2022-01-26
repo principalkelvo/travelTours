@@ -26,7 +26,7 @@
         </div>
       </div>
       <a
-        class="navbar-burger has-text-white"
+        class="navbar-burger burger has-text-white"
         aria-label="menu"
         aria-expanded="false"
         data-target="navbar-menu"
@@ -78,7 +78,6 @@ export default {
     };
   },
   methods: {
-      
     }
 };
 </script>

@@ -12,11 +12,14 @@
         </h2>
       </div>
 
+      <div class="trip-flex column is-12">
+      
       <TripBox
         v-for="trip in latestTrips.slice(0,4)"
         v-bind:key="trip.id"
         v-bind:trip="trip"
       />
+      </div>
     </div>
 
     <!-- popular places  -->
@@ -27,11 +30,14 @@
         </h2>
       </div>
 
+      <div class="trip-flex column is-12">
+
       <TripBox
         v-for="trip in popularTrips.slice(0,4)"
         v-bind:key="trip.id"
         v-bind:trip="trip"
       />
+      </div>
     </div>
 
     <div class="columns is-multiline hero-body">
@@ -40,12 +46,14 @@
           Family ⭐
         </h2>
       </div>
+      <div class="trip-flex column is-12">
 
       <TripBox
         v-for="trip in category.trips.slice(0,4)"
         v-bind:key="trip.id"
         v-bind:trip="trip"
       />
+    </div>
     </div>
 
 
@@ -150,11 +158,14 @@ div.clearNav{
 
 /* show dashboard  */
 @media (max-width: 1023px) {
+}
+@media (max-width: 1023px) {
   .dashboard {
     padding-left: 0;
     overflow-x: hidden;
     width: 100vw;
   }
+  
   
 }
 

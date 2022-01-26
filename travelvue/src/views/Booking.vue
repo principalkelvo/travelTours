@@ -82,31 +82,13 @@ export default {
   },
 };
 </script>
+<style>
+
+</style>
 <style scoped>
 h2 {
   color: black;
 }
 
-.trip-flex{
-    display: flex;
-        flex-wrap: wrap;
-        
-    flex-grow: 1;
-    flex-shrink: 0;
-}
-@media (max-width: 768px) {
 
-.trip-flex{
-    display: inline-flex;
-    overflow: auto;
-    flex-direction: row;
-    height: auto;
-    width: 100%;
-    flex-wrap: unset;
-    padding: 0;
-}
-.column{
-  padding: 0.75rem 0;
-}
-}
 </style>

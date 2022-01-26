@@ -113,6 +113,16 @@ h1::before {
   border-color: #660746;
   color: #660746;
 }
+
+//div for all trips
+.trip-flex{
+    display: flex;
+    flex-wrap: wrap;
+        
+    flex-grow: 1;
+    flex-shrink: 0;
+}
+
 @keyframes shake {
   0% {
     transform: translate(1px, 1px) rotate(0deg);
@@ -165,6 +175,20 @@ h2.is-size-5{
 }
 .line{
   text-align: center;
+}
+
+//div for all trips
+.trip-flex{
+    display: inline-flex;
+    overflow: auto;
+    flex-direction: row;
+    height: auto;
+    width: 100%;
+    flex-wrap: unset;
+    padding: 0;
+}
+.column{
+  padding: 0.75rem 0;
 }
 }
 </style>

@@ -15,7 +15,7 @@
         <!--the captions-->
         <div class="has-text-left captions">
           <div class="background-captions">
-            <p class="title mb-4 is-uppercase">Welcome to Pokot</p>
+            <p class="title mb-4 is-uppercase">Welcome to <br> Pokot</p>
             <p class="subtitle">Kenya spectacular sceneries</p>
           </div>
         </div>
@@ -119,5 +119,28 @@ export default {
       object-fit: cover;
     }
   }
+}
+@media (max-width: 768px) {
+  .mb-6{
+      margin-bottom: 1em !important;
+    }
+  section{
+    padding: 0;
+
+  .captions{ 
+    .title{
+      font-size: 1.2rem;
+    }
+    .subtitle{
+      font-size: .8rem;
+    }
+    
+    p{
+      font-weight:600;
+    }
+  }
+  }
+  
+  
 }
 </style>
