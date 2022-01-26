@@ -77,7 +77,7 @@ export default {
     bottom: 30%;
     left: 3%;
     p {
-      color: rgb(255, 255, 255);
+      color: white;
       font-weight: 1000;
       text-shadow: 1px 0px 5px rgba(0, 0, 0);
     }
