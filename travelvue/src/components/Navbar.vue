@@ -90,46 +90,5 @@ export default {
 
 
 <style lang="scss" scoped>
-nav.navbar {
-  /* box-shadow: 0 1px #660746; */
-  background-color: #660746;
-  color: white;
-}
-.navbar-item{
-  color: white;
 
-}
-a.navbar-item:focus,
-a.navbar-item:focus-within,
-a.navbar-item:hover,
-a.navbar-item.is-active,
-.navbar-link:focus,
-.navbar-link:focus-within,
-.navbar-link:hover,
-.navbar-link.is-active {
-  border-bottom: 5px solid #f9e2e3;
-  color: #f9e2e3;
-  background-color: #660746;
-  animation: shake 0.5s;
-}
-@media screen and (max-width: 1023px) {
-  .navbar-menu {
-    background-color: #660746;
-  }
-  a.navbar-item:focus,
-  a.navbar-item:focus-within,
-  a.navbar-item:hover,
-  a.navbar-item.is-active,
-  .navbar-link:focus,
-  .navbar-link:focus-within,
-  .navbar-link:hover,
-  .navbar-link.is-active {
-    animation: none;
-  }
-}
-@media (max-width: 768px) {
-.p-4{
-  padding: 2px !important;
-}
-}
 </style>

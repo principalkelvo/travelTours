@@ -1,0 +1,42 @@
+nav.navbar {
+  /* box-shadow: 0 1px $base-color; */
+  background-color: $base-color;
+  color: $white;
+}
+.navbar-item{
+  color: $white;
+
+}
+a.navbar-item:focus,
+a.navbar-item:focus-within,
+a.navbar-item:hover,
+a.navbar-item.is-active,
+.navbar-link:focus,
+.navbar-link:focus-within,
+.navbar-link:hover,
+.navbar-link.is-active {
+  border-bottom: 5px solid $base-color-light;
+  color: $base-color-light;
+  background-color: $base-color;
+  animation: shake 0.5s;
+}
+@media screen and (max-width: 1023px) {
+  .navbar-menu {
+    background-color: $base-color;
+  }
+  a.navbar-item:focus,
+  a.navbar-item:focus-within,
+  a.navbar-item:hover,
+  a.navbar-item.is-active,
+  .navbar-link:focus,
+  .navbar-link:focus-within,
+  .navbar-link:hover,
+  .navbar-link.is-active {
+    animation: none;
+  }
+}
+@media (max-width: 768px) {
+.p-4{
+  padding: 2px !important;
+}
+}
