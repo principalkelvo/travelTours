@@ -1,0 +1,5 @@
+html {
+    &.is-dark-mode-active {
+      background-color: $dark-mode-background-color;
+    }
+}

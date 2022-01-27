@@ -85,10 +85,7 @@ export default {
 <style>
 
 </style>
-<style scoped>
-h2 {
-  color: black;
-}
+<style lang='scss' scoped>
 
 
 </style>

@@ -1,24 +1,24 @@
 <template>
+<div class="dashboard-section">
   <section class="section">
     <!-- side bar  -->
-  <Asidebar />
-  <!-- carousel -->
-  <Halfwidth />
-  <!-- featured offers,latest trips  -->
-  <div class="columns is-multiline hero-body">
+    <Asidebar />
+    <!-- carousel -->
+    <Halfwidth />
+    <!-- featured offers,latest trips  -->
+    <div class="columns is-multiline hero-body">
       <div class="column is-12">
         <h2 class="is-size-3 has-text-weight-bold has-text-left">
-          Featured Offers <b style="color:red">❤</b>
+          Featured Offers <b style="color: red">❤</b>
         </h2>
       </div>
 
       <div class="trip-flex column is-12">
-      
-      <TripBox
-        v-for="trip in latestTrips.slice(0,4)"
-        v-bind:key="trip.id"
-        v-bind:trip="trip"
-      />
+        <TripBox
+          v-for="trip in latestTrips.slice(0, 4)"
+          v-bind:key="trip.id"
+          v-bind:trip="trip"
+        />
       </div>
     </div>
 
@@ -31,33 +31,28 @@
       </div>
 
       <div class="trip-flex column is-12">
-
-      <TripBox
-        v-for="trip in popularTrips.slice(0,4)"
-        v-bind:key="trip.id"
-        v-bind:trip="trip"
-      />
+        <TripBox
+          v-for="trip in popularTrips.slice(0, 4)"
+          v-bind:key="trip.id"
+          v-bind:trip="trip"
+        />
       </div>
     </div>
 
     <div class="columns is-multiline hero-body">
       <div class="column is-12">
-        <h2 class="is-size-3 has-text-weight-bold has-text-left">
-          Family ⭐
-        </h2>
+        <h2 class="is-size-3 has-text-weight-bold has-text-left">Family ⭐</h2>
       </div>
       <div class="trip-flex column is-12">
-
-      <TripBox
-        v-for="trip in category.trips.slice(0,4)"
-        v-bind:key="trip.id"
-        v-bind:trip="trip"
-      />
+        <TripBox
+          v-for="trip in category.trips.slice(0, 4)"
+          v-bind:key="trip.id"
+          v-bind:trip="trip"
+        />
+      </div>
     </div>
-    </div>
-
-
   </section>
+</div>
 </template>
 <script>
 import axios from "axios";
@@ -73,9 +68,9 @@ export default {
     return {
       latestTrips: [],
       popularTrips: [],
-      category:{
-                trips:[]
-            }
+      category: {
+        trips: [],
+      },
     };
   },
   components: {
@@ -83,7 +78,7 @@ export default {
     Halfwidth,
     TripBox,
   },
-  
+
   mounted() {
     this.getLatestTrips();
     this.getPopularTrips();
@@ -111,22 +106,21 @@ export default {
         });
     },
 
-    async getFamilyCategory(){
-            // const categorySlug= this.$route.params.category_slug
-            
-            // family category if you want to add another 
-            // bouque change family to category slug
-            const categorySlug= "family"
-            await axios
-                .get(`/api/v1/trips/${categorySlug}/`)
-                .then(response=>{
-                    this.category= response.data
-                })
-                .catch(error=>{
-                    console.log(error)
-                })
-                
-        }
+    async getFamilyCategory() {
+      // const categorySlug= this.$route.params.category_slug
+
+      // family category if you want to add another
+      // bouque change family to category slug
+      const categorySlug = "family";
+      await axios
+        .get(`/api/v1/trips/${categorySlug}/`)
+        .then((response) => {
+          this.category = response.data;
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+    },
   },
   //  beforeCreate: function() {
   //     document.body.className = 'dashboard';
@@ -141,45 +135,6 @@ export default {
   // },
 };
 </script>
-<style lang=scss>
-/* dashboard slide in animation */
-.dashboard {
-  background-color: #f9e2e3;
-  padding-left: 14rem;
-  transition: padding-left 1s;
-  animation: 1s ease-out 0s 1 slideInFromLeft;
-  
-}
-div.clearNav{
-  display: none;
-}
+<style lang="scss">
 
-
-
-/* show dashboard  */
-@media (max-width: 1023px) {
-}
-@media (max-width: 1023px) {
-  .dashboard {
-    padding-left: 0;
-    overflow-x: hidden;
-    width: 100vw;
-  }
-  
-  
-}
-
-@keyframes slideInFromLeft {
-  0% {
-    transform: translateX(-100%);
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
-</style>
-<style scoped>
-h2{
-  color: black;
-}
 </style>

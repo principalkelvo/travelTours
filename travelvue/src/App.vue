@@ -71,5 +71,11 @@ export default {
 </script>
 <style lang="scss">
 
+// $base-color: #660746;
+// $base-color-light: #f9e2e3;
+// $white: white;
+// $black: black;
+
+
 
 </style>

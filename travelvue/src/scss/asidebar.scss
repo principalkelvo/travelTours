@@ -1,7 +1,7 @@
-aside.is-placed-left {
+.is-placed-left {
     display: block;
   }
-  aside.aside {
+  .aside {
     background-color: #660746;
   
     width: 0rem;
@@ -19,6 +19,12 @@ aside.is-placed-left {
   
     display: flex;
     flex-direction: column;
+  }
+  aside{
+    .asidecontent{
+    background-color: #660746;
+
+    }
   }
   @media (min-width: 1024px) {
    aside.aside {

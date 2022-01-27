@@ -52,7 +52,7 @@
         <router-link to="/about" class="navbar-item">ABOUT US</router-link>
         <router-link to="/contact" class="navbar-item">CONTACT</router-link>
         <router-link to="/booking" class="navbar-item">BOOKING</router-link>
-        <div class="navbar-item">
+        <!-- <div class="navbar-item">
           <div class="buttons">
             <router-link to="/log-in" class="button is-light"
               >Log In</router-link
@@ -63,7 +63,7 @@
               ><span>cart</span>
             </router-link>
           </div>
-        </div>
+        </div> -->
       </div>
     </div>
   </nav>
@@ -90,5 +90,10 @@ export default {
 
 
 <style lang="scss" scoped>
+// $base-color: #660746;
+// $base-color-light: #f9e2e3;
+// $white: white;
+// $black: black;
+
 
 </style>

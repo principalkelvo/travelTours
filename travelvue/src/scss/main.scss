@@ -1,0 +1,140 @@
+/* Theme style (colors & sizes) */
+@import "theme.scss";
+
+/* Core Libs & Lib configs */
+@import "@/../node_modules/bulma";
+
+/* Theme components */
+@import "navbar.scss";
+@import "dashboard.scss";
+@import "about.scss";
+@import "home.scss";
+@import "asidebar.scss";
+@import "asidecontent.scss";
+@import "booking.scss";
+@import "contact.scss";
+@import "bigfooter.scss";
+@import "trip.scss";
+@import "darkmode.scss";
+
+
+html {
+    background: $base-color-light;
+  }
+  section {
+    background: $base-color-light;
+  }
+  img {
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  //All titles
+  h1::before {
+    content: "\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0";
+    text-decoration: line-through;
+    margin: auto 0.5em;
+  }
+  
+  .button {
+    background-color: $base-color;
+    color: $white;
+    transition: background-color .5s, color 1s;
+  }
+  
+  .button:hover,
+  .button.is-hovered {
+    background-color: $base-color-light;
+    border-color: $base-color;
+    color: $base-color;
+  }
+  .button:active,
+  .button.is-active {
+    background-color: $base-color-light;
+    border-color: $base-color;
+    color: $base-color;
+    box-shadow: 0 0 0 0.125em rgb(72 95 199 / 25%);
+  }
+  .button:focus,
+  .button.is-focused {
+    background-color: $base-color-light;
+    border-color: $base-color;
+    color: $base-color;
+  }
+  
+  //div for all trips
+  .trip-flex{
+      display: flex;
+      flex-wrap: wrap;
+          
+      flex-grow: 1;
+      flex-shrink: 0;
+  }
+  
+  @keyframes shake {
+    0% {
+      transform: translate(1px, 1px) rotate(0deg);
+    }
+    10% {
+      transform: translate(-1px, -2px) rotate(-1deg);
+    }
+    20% {
+      transform: translate(-3px, 0px) rotate(1deg);
+    }
+    30% {
+      transform: translate(3px, 2px) rotate(0deg);
+    }
+    40% {
+      transform: translate(1px, -1px) rotate(1deg);
+    }
+    50% {
+      transform: translate(-1px, 2px) rotate(-1deg);
+    }
+    60% {
+      transform: translate(-3px, 1px) rotate(0deg);
+    }
+    70% {
+      transform: translate(3px, 1px) rotate(-1deg);
+    }
+    80% {
+      transform: translate(-1px, -1px) rotate(1deg);
+    }
+    90% {
+      transform: translate(1px, 2px) rotate(0deg);
+    }
+    100% {
+      transform: translate(1px, -2px) rotate(-1deg);
+    }
+  }
+  @media (max-width: 768px) {
+    h1::before {
+    content: "";
+    text-decoration: line-through;
+    margin: auto 0.5em;
+  }  
+  .section {
+      padding: 1rem;
+  }
+  h1.is-size-2{
+    font-size: 1.5rem !important;
+  }
+  h2.is-size-5{
+    font-size: .8rem !important;
+  }
+  .line{
+    text-align: center;
+  }
+  
+  //div for all trips
+  .trip-flex{
+      display: inline-flex;
+      overflow: auto;
+      flex-direction: row;
+      height: auto;
+      width: 100%;
+      flex-wrap: unset;
+      padding: 0;
+  }
+  .column{
+    padding: 0.75rem 0.75rem;
+  }
+  }

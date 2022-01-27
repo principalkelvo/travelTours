@@ -185,54 +185,5 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-.shortcuts {
-  background-color: #f9e2e3;
-  padding: 2px;
-  text-align: center;
-  margin: 0 auto;
-  width: 100%;
-  //fonts
-  font-size: 1.2em;
-  letter-spacing: 0.105em;
 
-  .icon {
-    // border: #000000 solid;
-    font-size: 3.8em;
-    margin-top: 10px;
-    text-decoration: none;
-    text-align: center;
-    color: #000000;
-  }
-  p {
-    width: 100%;
-    font-size: 1em;
-    // border: 3px solid;
-    color: #000000;
-  }
-}
-.review{
-  border:#660746 solid;
-  color: #ff0000;
-}
-.profile{
-  width:7em;
-  height: 7em;
-  background: url('../assets/fullheight/mama-sham.jpeg');
-  border: 2px #660746;
-  color: #f9e2e3;
-  border-radius: 50%;
-  background-repeat: round;
-  /* change to black and white  */
-    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0*/
-    filter: grayscale(100%);
-  transition: box-shadow .6s ease-in-out;
-}
-.profile:hover{
-  box-shadow: 0 0 0 0.125em rgb(102 7 70 / 25%);
-}
-@media (max-width: 768px) {
-  .profile{
-  width:4em;
-  height: 4em;}
-}
 </style>

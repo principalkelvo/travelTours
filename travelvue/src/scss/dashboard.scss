@@ -1,0 +1,39 @@
+/* dashboard slide in animation */
+
+.dashboard {
+    background-color: #f9e2e3;
+    padding-left: 14rem;
+    transition: padding-left 1s;
+    animation: 1s ease-out 0s 1 slideInFromLeft;
+  }
+  div.clearNav {
+    display: none;
+  }
+  
+  /* show dashboard  */
+  @media (max-width: 1023px) {
+  }
+  @media (max-width: 1023px) {
+    .dashboard {
+      padding-left: 0;
+      overflow-x: hidden;
+      width: 100vw;
+    }
+  }
+  
+  @keyframes slideInFromLeft {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  .dashboard-section{
+  .section {
+    padding: 1rem;
+  }
+  h2 {
+    color: black;
+  }
+  }

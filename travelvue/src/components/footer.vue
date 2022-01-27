@@ -5,7 +5,7 @@
         <div class="level-left">
           <div class="level-item">
             <div class="footer-copyright">
-              <b>&copy; {{ year }}, tours</b> kengen &mdash; Admin Name <span class="tag">v1.0.0</span>
+              <b>&copy; {{ year }}, Pokot</b> tours &mdash; Admin Name <span class="tag">v1.0.0</span>
             </div>
           </div>
         </div>
@@ -13,6 +13,7 @@
           <div class="level-item">
             <div class="logo">
               <a href="#">
+                <img src="../assets/logo.png" alt="">
               </a>
             </div>
           </div>

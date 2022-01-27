@@ -1,6 +1,6 @@
 <template>
 
-  <section class="hero-body">
+  <section class="hero-body asidecontent">
     <div class="image logo mb-4">
         <img src="../assets/logo.png" alt="">
       </div>
@@ -48,98 +48,7 @@ export default {
   components: {},
 };
 </script>
-<style scoped>
-.logo{
-  width:8em;
-  height: 8em;
-  border: 2px white;
-  color: #f9e2e3;
-  border-radius: 50%;
+<style lang='scss' scoped>
 
-  
-}
-.logo img{
-  max-width: 100%;
-  max-height: 100%;
-  border: 2px white;
-  padding: 2em;
-
-}
-/* category tite its absolute */
-
-.categoryTitle{
-    position: absolute;
-    width: 70%;
-    height: 2em;
-    top: 10.5em;
-    margin: 0 1.5em;
-    left: 0;
-    padding: 2px 8px; 
-  border-radius: 10px;
-  background-color: #f9e2e3de ;
-
-}
-.subtitle{
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: 1em;
-}
-section, footer {
-  background: none;
-  opacity: 0;
-  transition: opacity 2s ease-in;
-
-}
-section,
-.section,
-.title,
-h2 {
-  color: white;
-  font-weight: normal;
-    
-
-}
-h2.subtitle {
-  color: black;
-  font-weight: normal;
-  transform: scale(0.9, 1.5);
-
-}
-.category{
-    display: grid;
-    line-height: 1.4;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: 1em;
-    margin-left: 5px;
-}
-
-.aside-item{
-    color: #d1cccf;
-    display: inline-flex;
-    font-weight: lighter;
-    /* transform: scale(0.83, 1.33); */
-}
-footer{
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: 1em;
-    position: absolute;
-    bottom: 10%;
-    
-}
-.aside-item img{
-    height: 1.5em;
-    margin-right: .2em;
-}
-@media (min-width: 1024px) {
- section,footer {
-  opacity: 1;
-
-
-  }
-}
-
-
-/* .logo:hover{
-  box-shadow: 0 0 0 0.125em rgb(102 7 70 / 25%);
-} */
 
 </style>

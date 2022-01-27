@@ -760,19 +760,6 @@ export default {
   },
 };
 </script>
-<style scoped>
-.details a {
-  color: black;
-  text-decoration: underline;
-  transition: color 0.25s ease-out, background-color 0.25s ease-out,
-    text-decoration 0.25s ease-out;
-}
-a:hover {
-  color: #660746;
-  text-decoration: none;
-}
-a:focus {
-  color: #660746;
-  text-decoration: none;
-}
+<style lang='scss' scoped>
+
 </style>

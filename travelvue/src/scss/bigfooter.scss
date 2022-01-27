@@ -1,0 +1,46 @@
+.footer {
+    background: #f9e2e3;
+    .subtitle {
+      color: white;
+    }
+    a i {
+      color: #f9e2e3;
+      padding: 0 10px;
+    }
+    input.input {
+      background-color: none;
+    }
+    .select select,
+    .textarea,
+    .input {
+      background-color: #660746;
+      border-color: #f9e2e3;
+      border-radius: 20px;
+      color: #ece4e9;
+    }
+    ::-webkit-input-placeholder {
+      color: #ece4e9a6;
+    }
+    :-moz-placeholder {
+      color: #ece4e9a6;
+    }
+    :-ms-input-placeholder {
+      color: #ece4e9a6;
+    }
+    ::-moz-placeholder {
+      color: #ece4e9a6;
+    }
+  }
+  .content_bg {
+    padding-left: 2%;
+    height: 100%;
+  }
+  .footer_content {
+    background-color: #660746;
+    padding-left: 35%;
+    padding-top: 2%;
+    height: 100%;
+    border-radius: 2%;
+    color: #f9e2e3;
+    padding-bottom:10% ;
+  }
