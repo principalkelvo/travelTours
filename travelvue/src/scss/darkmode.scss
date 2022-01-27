@@ -120,12 +120,20 @@ html {
                     box-shadow: 0 1px $dark-mode-light-border-color;
                 }
             }
+            .categoryTitle{
+                background-color: $dark-mode-background-color;
+                box-shadow: 1px 0 $dark-mode-light-border-color;
+                border: $dark-mode-border;
+            }
+            .aside-item:hover{
+                color: $dark-mode-link-color;
+            }
+            .aside-item::after{
+                background-color: rgba($color: $dark-mode-overlay-background-color, $alpha: .5);
+            }
+
         }
-        .categoryTitle{
-            background-color: $dark-mode-background-color;
-            box-shadow: 1px 0 $dark-mode-light-border-color;
-            border: $dark-mode-border;
-        }
+        
 
         a {
             &.is-active {
@@ -143,11 +151,11 @@ html {
             color: $white-ter;
 
         }
-        .footer_img{
-            img{
-                filter: grayscale(100%);
-            }
-        }
+        // .footer_img{
+        //     img{
+        //         filter: grayscale(100%);
+        //     }
+        // }
         .footer_content{
             background-color: $grey-darker;
         }

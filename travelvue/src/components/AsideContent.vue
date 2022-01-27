@@ -12,11 +12,11 @@
 
       <!-- Category field  -->
       <div class="field category p-2 mt-3">
-        <router-link to="/family" class="aside-item">Family</router-link>
-        <router-link to="/wedding" class="aside-item">Wedding</router-link>
+        <router-link to="/family" class="aside-item is-capitalized">Family</router-link>
+        <router-link to="/wedding" class="aside-item is-capitalized">Wedding</router-link>
         <router-link to="/dinner" class="aside-item is-capitalized">dinner</router-link>
         <router-link to="/conferences" class="aside-item is-capitalized">conferences</router-link>
-        <router-link to="/bars_clubs" class="aside-item">Bars and Clubs</router-link>
+        <router-link to="/bars_clubs" class="aside-item is-capitalized">Bars and Clubs</router-link>
       </div>
 
       <div class="field category p-2 mt-2">
