@@ -52,8 +52,13 @@
         <router-link to="/about" class="navbar-item">ABOUT US</router-link>
         <router-link to="/contact" class="navbar-item">CONTACT</router-link>
         <router-link to="/booking" class="navbar-item">BOOKING</router-link>
-        <!-- <div class="navbar-item">
-          <div class="buttons">
+        <div class="navbar-item">
+          
+          <a class="navbar-item has-divider is-desktop-icon-only" title="Dark mode" @click="darkModeToggle">
+          <b-icon :icon="darkModeToggleIcon" custom-size="default"/>
+          <span>Dark mode</span>
+        </a>
+          <!-- <div class="buttons">
             <router-link to="/log-in" class="button is-light"
               >Log In</router-link
             >
@@ -62,8 +67,8 @@
                 ><i class="fa fa-shopping-cart" aria-hidden="true"></i></span
               ><span>cart</span>
             </router-link>
-          </div>
-        </div> -->
+          </div> -->
+        </div>
       </div>
     </div>
   </nav>
