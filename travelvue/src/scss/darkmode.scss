@@ -1,5 +1,155 @@
 html {
     &.is-dark-mode-active {
-      background-color: $dark-mode-background-color;
+        background-color: $dark-mode-background-color;
+
+        section {
+            background-color: $dark-mode-background-color;
+
+        }
+
+        .footer {
+            background-color: $dark-mode-background-color !important;
+
+        }
+
+        .button {
+            background-color: transparent;
+            border-color: $dark-mode-button-color !important;
+            color: $dark-mode-button-color !important;
+
+            &:hover:not([disabled]) {
+                background-color: $dark-mode-button-color;
+                color: $dark-mode-button-hover-color !important;
+            }
+
+            &:hover {
+                background-color: $dark-mode-button-color;
+                color: $base-color-light;
+            }
+        }
+
+        .title {
+            color: $grey-lighter;
+        }
+
+        .subtitle {
+            color: $grey-lighter;
+        }
+
+        body {
+            color: $grey-lighter;
+        }
+
+        strong {
+            color: $dark-mode-color;
+        }
+
+        hr {
+            background-color: $dark-mode-light-border-color !important;
+        }
+
+        a {
+            color: $dark-mode-link-color;
+        }
+
+        .media {
+            border-color: $dark-mode-light-border-color;
+        }
+        .input{
+            background-color: transparent;
+        }
+
+        nav.navbar {
+            background-color: $dark-mode-background-color;
+            box-shadow: 0 1px $dark-mode-light-border-color;
+
+            .navbar-menu{
+            background-color: $dark-mode-background-color;
+            }
+
+            .navbar-item {
+                color: $dark-mode-link-color;
+
+                .navbar-link {
+                    color: $dark-mode-link-color;
+                }
+
+                .input {
+                    color: $dark-mode-color;
+
+                    &::placeholder {
+                        color: $grey-light;
+                    }
+                }
+
+                &.has-divider {
+                    border-color: $dark-mode-light-border-color;
+                }
+
+                &.is-active {
+                    color: $dark-mode-link-active-color;
+                }
+            }
+        }
+
+        
+
+            .navbar-item:hover {
+                color: $base-color-light !important;
+                background-color: transparent;
+            }
+        
+
+        aside.aside {
+            background-color: $dark-mode-background-color;
+            box-shadow: 1px 0 $dark-mode-light-border-color;
+
+            .aside-tools {
+                color: $dark-mode-color;
+                box-shadow: 0 1px $dark-mode-light-border-color;
+
+                .aside-close {
+                    color: $dark-mode-color;
+                }
+            }
+
+            .menu-list li.is-active {
+                box-shadow: 0 1px $dark-mode-light-border-color;
+
+                >a {
+                    box-shadow: 0 1px $dark-mode-light-border-color;
+                }
+            }
+        }
+        .categoryTitle{
+            background-color: $dark-mode-background-color;
+            box-shadow: 1px 0 $dark-mode-light-border-color;
+            border: $dark-mode-border;
+        }
+
+        a {
+            &.is-active {
+                color: $dark-mode-link-active-color;
+            }
+
+            &:hover {
+                color: $dark-mode-link-hover-color;
+            }
+        }
+        h2{
+            color: $white-bis;
+        }
+        h3{
+            color: $white-ter;
+
+        }
+        .footer_img{
+            img{
+                filter: grayscale(100%);
+            }
+        }
+        .footer_content{
+            background-color: $grey-darker;
+        }
     }
 }

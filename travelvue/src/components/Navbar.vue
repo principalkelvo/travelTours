@@ -53,7 +53,7 @@
         <router-link to="/contact" class="navbar-item">CONTACT</router-link>
         <router-link to="/booking" class="navbar-item">BOOKING</router-link>
         <div class="navbar-item">
-          
+
           <a class="navbar-item has-divider is-desktop-icon-only" title="Dark mode" @click="darkModeToggle">
           <b-icon :icon="darkModeToggleIcon" custom-size="default"/>
           <span>Dark mode</span>
@@ -82,7 +82,15 @@ export default {
       showMobileMenu: false,
     };
   },
+  computed:{
+    darkModeToggleIcon () {
+      return this.isDarkModeActive ? 'white-balance-sunny' : 'weather-night'
+    },
+  },
   methods: {
+    darkModeToggle () {
+      this.$store.commit('darkModeToggle')
+    },
     }
 };
 </script>
