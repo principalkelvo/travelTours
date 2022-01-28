@@ -123,10 +123,15 @@ html {
             .categoryTitle{
                 background-color: $dark-mode-background-color;
                 box-shadow: 1px 0 $dark-mode-light-border-color;
-                border: $dark-mode-border;
+                // border: $dark-mode-border;
+                padding-left: 0;
+            }
+            .aside-item{
+                color: $dark-mode-link-color;
+
             }
             .aside-item:hover{
-                color: $dark-mode-link-color;
+                color: $base-color-light;
             }
             .aside-item::after{
                 background-color: rgba($color: $dark-mode-overlay-background-color, $alpha: .5);
@@ -158,6 +163,12 @@ html {
         // }
         .footer_content{
             background-color: $grey-darker;
+        }
+        .box{
+            box-shadow: 0 0.5em 1em -0.125em rgb(0 0 0 / 10%), 0 0px 0 1px rgb(0 0 0 / 2%);
+            background-color: $grey-darker;
+            justify-content: center;
+            padding: 2em;
         }
     }
 }
