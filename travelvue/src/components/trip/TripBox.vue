@@ -45,6 +45,10 @@ export default {
       0 0px 0 1px rgb(10 10 10 / 100%);
   }
 }
+.image{
+  height: 12em;
+
+}
 
 .image img {
   margin-top: -1.25rem;
@@ -52,7 +56,7 @@ export default {
   margin-right: -1.25rem;
   border-radius: 10%;
   transition: border-radius 1s;
-  height: 12em;
+  height: 100%;
   max-height: 100%;
   width:100%;
   max-width:100%;
